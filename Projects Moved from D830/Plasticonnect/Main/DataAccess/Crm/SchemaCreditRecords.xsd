@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchemaCreditRecords" targetNamespace="http://tempuri.org/SchemaCreditRecords.xsd" xmlns:mstns="http://tempuri.org/SchemaCreditRecords.xsd" xmlns="http://tempuri.org/SchemaCreditRecords.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RAMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RAMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Plasticonnect.DataAccess.Properties.Settings.GlobalReference.Default.RAMConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="connRAM" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connRAM (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Plasticonnect.DataAccess.Properties.Settings.GlobalReference.Default.connRAM" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CreditRecordsTableAdapter" GeneratorDataComponentClassName="CreditRecordsTableAdapter" Name="CreditRecords" UserDataComponentName="CreditRecordsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connRAM (Settings)" DbObjectName="RAM.dbo.CreditRecords" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[CreditRecords] WHERE (([accountNumber] = @Original_accountNumber) AND ((@IsNull_terms = 1 AND [terms] IS NULL) OR ([terms] = @Original_terms)) AND ((@IsNull_creditLimit = 1 AND [creditLimit] IS NULL) OR ([creditLimit] = @Original_creditLimit)) AND ((@IsNull_lastCheck = 1 AND [lastCheck] IS NULL) OR ([lastCheck] = @Original_lastCheck)) AND ((@IsNull_bankName = 1 AND [bankName] IS NULL) OR ([bankName] = @Original_bankName)) AND ((@IsNull_bankBranch = 1 AND [bankBranch] IS NULL) OR ([bankBranch] = @Original_bankBranch)) AND ((@IsNull_bankAccountNumber = 1 AND [bankAccountNumber] IS NULL) OR ([bankAccountNumber] = @Original_bankAccountNumber)) AND ((@IsNull_bankAddress1 = 1 AND [bankAddress1] IS NULL) OR ([bankAddress1] = @Original_bankAddress1)) AND ((@IsNull_bankAddress2 = 1 AND [bankAddress2] IS NULL) OR ([bankAddress2] = @Original_bankAddress2)) AND ((@IsNull_bankPostalCode = 1 AND [bankPostalCode] IS NULL) OR ([bankPostalCode] = @Original_bankPostalCode)) AND ((@IsNull_bankCity = 1 AND [bankCity] IS NULL) OR ([bankCity] = @Original_bankCity)) AND ((@IsNull_bankContact = 1 AND [bankContact] IS NULL) OR ([bankContact] = @Original_bankContact)) AND ((@IsNull_bankPhone = 1 AND [bankPhone] IS NULL) OR ([bankPhone] = @Original_bankPhone)) AND ((@IsNull_bankFax = 1 AND [bankFax] IS NULL) OR ([bankFax] = @Original_bankFax)) AND ((@IsNull_bankEMail = 1 AND [bankEMail] IS NULL) OR ([bankEMail] = @Original_bankEMail)) AND ((@IsNull_bankAverageBalance = 1 AND [bankAverageBalance] IS NULL) OR ([bankAverageBalance] = @Original_bankAverageBalance)) AND ((@IsNull_bankAverageBalanceFigures = 1 AND [bankAverageBalanceFigures] IS NULL) OR ([bankAverageBalanceFigures] = @Original_bankAverageBalanceFigures)) AND ((@IsNull_bankNsfActivity = 1 AND [bankNsfActivity] IS NULL) OR ([bankNsfActivity] = @Original_bankNsfActivity)) AND ((@IsNull_bankAccountAge = 1 AND [bankAccountAge] IS NULL) OR ([bankAccountAge] = @Original_bankAccountAge)) AND ((@IsNull_creditRequired = 1 AND [creditRequired] IS NULL) OR ([creditRequired] = @Original_creditRequired)) AND ((@IsNull_termsOfPaymentRequired = 1 AND [termsOfPaymentRequired] IS NULL) OR ([termsOfPaymentRequired] = @Original_termsOfPaymentRequired)) AND ((@IsNull_locStatus = 1 AND [locStatus] IS NULL) OR ([locStatus] = @Original_locStatus)) AND ((@IsNull_locLimit = 1 AND [locLimit] IS NULL) OR ([locLimit] = @Original_locLimit)) AND ((@IsNull_locLimitFigures = 1 AND [locLimitFigures] IS NULL) OR ([locLimitFigures] = @Original_locLimitFigures)) AND ((@IsNull_locOwes = 1 AND [locOwes] IS NULL) OR ([locOwes] = @Original_locOwes)) AND ((@IsNull_locOwesFigures = 1 AND [locOwesFigures] IS NULL) OR ([locOwesFigures] = @Original_locOwesFigures)) AND ((@IsNull_loanStatus = 1 AND [loanStatus] IS NULL) OR ([loanStatus] = @Original_loanStatus)) AND ((@IsNull_loanLimit = 1 AND [loanLimit] IS NULL) OR ([loanLimit] = @Original_loanLimit)) AND ((@IsNull_loanLimitFigures = 1 AND [loanLimitFigures] IS NULL) OR ([loanLimitFigures] = @Original_loanLimitFigures)) AND ((@IsNull_loanOwes = 1 AND [loanOwes] IS NULL) OR ([loanOwes] = @Original_loanOwes)) AND ((@IsNull_loanOwesFigures = 1 AND [loanOwesFigures] IS NULL) OR ([loanOwesFigures] = @Original_loanOwesFigures)) AND ((@IsNull_yearsInBusiness = 1 AND [yearsInBusiness] IS NULL) OR ([yearsInBusiness] = @Original_yearsInBusiness)) AND ([datestamp] = @Original_datestamp) AND ([userInitial] = @Original_userInitial))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_accountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="accountNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_terms" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_terms" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_creditLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_creditLimit" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_lastCheck" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_lastCheck" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankBranch" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankBranch" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAccountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAccountNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAddress1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAddress1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAddress2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAddress2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankPostalCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_bankPostalCode" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankCity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankContact" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankContact" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankPhone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankPhone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankFax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankFax" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankEMail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankEMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAverageBalance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAverageBalance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAverageBalanceFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAverageBalanceFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankNsfActivity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankNsfActivity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAccountAge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAccountAge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_creditRequired" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_creditRequired" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_termsOfPaymentRequired" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_termsOfPaymentRequired" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locLimitFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locOwes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locOwesFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanLimitFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanOwes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanOwesFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_yearsInBusiness" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_yearsInBusiness" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datestamp" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="datestamp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_userInitial" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="userInitial" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[CreditRecords] ([accountNumber], [terms], [creditLimit], [lastCheck], [bankName], [bankBranch], [bankAccountNumber], [bankAddress1], [bankAddress2], [bankPostalCode], [bankCity], [bankContact], [bankPhone], [bankFax], [bankEMail], [bankAverageBalance], [bankAverageBalanceFigures], [bankNsfActivity], [bankAccountAge], [creditRequired], [termsOfPaymentRequired], [locStatus], [locLimit], [locLimitFigures], [locOwes], [locOwesFigures], [loanStatus], [loanLimit], [loanLimitFigures], [loanOwes], [loanOwesFigures], [yearsInBusiness], [datestamp], [userInitial]) VALUES (@accountNumber, @terms, @creditLimit, @lastCheck, @bankName, @bankBranch, @bankAccountNumber, @bankAddress1, @bankAddress2, @bankPostalCode, @bankCity, @bankContact, @bankPhone, @bankFax, @bankEMail, @bankAverageBalance, @bankAverageBalanceFigures, @bankNsfActivity, @bankAccountAge, @creditRequired, @termsOfPaymentRequired, @locStatus, @locLimit, @locLimitFigures, @locOwes, @locOwesFigures, @loanStatus, @loanLimit, @loanLimitFigures, @loanOwes, @loanOwesFigures, @yearsInBusiness, @datestamp, @userInitial);
+SELECT accountNumber, terms, creditLimit, lastCheck, bankName, bankBranch, bankAccountNumber, bankAddress1, bankAddress2, bankPostalCode, bankCity, bankContact, bankPhone, bankFax, bankEMail, bankAverageBalance, bankAverageBalanceFigures, bankNsfActivity, bankAccountAge, creditRequired, termsOfPaymentRequired, locStatus, locLimit, locLimitFigures, locOwes, locOwesFigures, loanStatus, loanLimit, loanLimitFigures, loanOwes, loanOwesFigures, yearsInBusiness, datestamp, userInitial FROM CreditRecords WHERE (accountNumber = @accountNumber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@accountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="accountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@terms" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@creditLimit" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@lastCheck" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankBranch" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAccountNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAddress1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAddress2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@bankPostalCode" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankContact" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankPhone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankFax" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankEMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAverageBalance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAverageBalanceFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankNsfActivity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAccountAge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@creditRequired" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@termsOfPaymentRequired" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@yearsInBusiness" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datestamp" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="datestamp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@userInitial" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="userInitial" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT accountNumber, terms, creditLimit, lastCheck, bankName, bankBranch, bankAccountNumber, bankAddress1, bankAddress2, bankPostalCode, bankCity, bankContact, bankPhone, bankFax, bankEMail, bankAverageBalance, bankAverageBalanceFigures, bankNsfActivity, bankAccountAge, creditRequired, termsOfPaymentRequired, locStatus, locLimit, locLimitFigures, locOwes, locOwesFigures, loanStatus, loanLimit, loanLimitFigures, loanOwes, loanOwesFigures, yearsInBusiness, datestamp, userInitial FROM dbo.CreditRecords</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[CreditRecords] SET [accountNumber] = @accountNumber, [terms] = @terms, [creditLimit] = @creditLimit, [lastCheck] = @lastCheck, [bankName] = @bankName, [bankBranch] = @bankBranch, [bankAccountNumber] = @bankAccountNumber, [bankAddress1] = @bankAddress1, [bankAddress2] = @bankAddress2, [bankPostalCode] = @bankPostalCode, [bankCity] = @bankCity, [bankContact] = @bankContact, [bankPhone] = @bankPhone, [bankFax] = @bankFax, [bankEMail] = @bankEMail, [bankAverageBalance] = @bankAverageBalance, [bankAverageBalanceFigures] = @bankAverageBalanceFigures, [bankNsfActivity] = @bankNsfActivity, [bankAccountAge] = @bankAccountAge, [creditRequired] = @creditRequired, [termsOfPaymentRequired] = @termsOfPaymentRequired, [locStatus] = @locStatus, [locLimit] = @locLimit, [locLimitFigures] = @locLimitFigures, [locOwes] = @locOwes, [locOwesFigures] = @locOwesFigures, [loanStatus] = @loanStatus, [loanLimit] = @loanLimit, [loanLimitFigures] = @loanLimitFigures, [loanOwes] = @loanOwes, [loanOwesFigures] = @loanOwesFigures, [yearsInBusiness] = @yearsInBusiness, [datestamp] = @datestamp, [userInitial] = @userInitial WHERE (([accountNumber] = @Original_accountNumber) AND ((@IsNull_terms = 1 AND [terms] IS NULL) OR ([terms] = @Original_terms)) AND ((@IsNull_creditLimit = 1 AND [creditLimit] IS NULL) OR ([creditLimit] = @Original_creditLimit)) AND ((@IsNull_lastCheck = 1 AND [lastCheck] IS NULL) OR ([lastCheck] = @Original_lastCheck)) AND ((@IsNull_bankName = 1 AND [bankName] IS NULL) OR ([bankName] = @Original_bankName)) AND ((@IsNull_bankBranch = 1 AND [bankBranch] IS NULL) OR ([bankBranch] = @Original_bankBranch)) AND ((@IsNull_bankAccountNumber = 1 AND [bankAccountNumber] IS NULL) OR ([bankAccountNumber] = @Original_bankAccountNumber)) AND ((@IsNull_bankAddress1 = 1 AND [bankAddress1] IS NULL) OR ([bankAddress1] = @Original_bankAddress1)) AND ((@IsNull_bankAddress2 = 1 AND [bankAddress2] IS NULL) OR ([bankAddress2] = @Original_bankAddress2)) AND ((@IsNull_bankPostalCode = 1 AND [bankPostalCode] IS NULL) OR ([bankPostalCode] = @Original_bankPostalCode)) AND ((@IsNull_bankCity = 1 AND [bankCity] IS NULL) OR ([bankCity] = @Original_bankCity)) AND ((@IsNull_bankContact = 1 AND [bankContact] IS NULL) OR ([bankContact] = @Original_bankContact)) AND ((@IsNull_bankPhone = 1 AND [bankPhone] IS NULL) OR ([bankPhone] = @Original_bankPhone)) AND ((@IsNull_bankFax = 1 AND [bankFax] IS NULL) OR ([bankFax] = @Original_bankFax)) AND ((@IsNull_bankEMail = 1 AND [bankEMail] IS NULL) OR ([bankEMail] = @Original_bankEMail)) AND ((@IsNull_bankAverageBalance = 1 AND [bankAverageBalance] IS NULL) OR ([bankAverageBalance] = @Original_bankAverageBalance)) AND ((@IsNull_bankAverageBalanceFigures = 1 AND [bankAverageBalanceFigures] IS NULL) OR ([bankAverageBalanceFigures] = @Original_bankAverageBalanceFigures)) AND ((@IsNull_bankNsfActivity = 1 AND [bankNsfActivity] IS NULL) OR ([bankNsfActivity] = @Original_bankNsfActivity)) AND ((@IsNull_bankAccountAge = 1 AND [bankAccountAge] IS NULL) OR ([bankAccountAge] = @Original_bankAccountAge)) AND ((@IsNull_creditRequired = 1 AND [creditRequired] IS NULL) OR ([creditRequired] = @Original_creditRequired)) AND ((@IsNull_termsOfPaymentRequired = 1 AND [termsOfPaymentRequired] IS NULL) OR ([termsOfPaymentRequired] = @Original_termsOfPaymentRequired)) AND ((@IsNull_locStatus = 1 AND [locStatus] IS NULL) OR ([locStatus] = @Original_locStatus)) AND ((@IsNull_locLimit = 1 AND [locLimit] IS NULL) OR ([locLimit] = @Original_locLimit)) AND ((@IsNull_locLimitFigures = 1 AND [locLimitFigures] IS NULL) OR ([locLimitFigures] = @Original_locLimitFigures)) AND ((@IsNull_locOwes = 1 AND [locOwes] IS NULL) OR ([locOwes] = @Original_locOwes)) AND ((@IsNull_locOwesFigures = 1 AND [locOwesFigures] IS NULL) OR ([locOwesFigures] = @Original_locOwesFigures)) AND ((@IsNull_loanStatus = 1 AND [loanStatus] IS NULL) OR ([loanStatus] = @Original_loanStatus)) AND ((@IsNull_loanLimit = 1 AND [loanLimit] IS NULL) OR ([loanLimit] = @Original_loanLimit)) AND ((@IsNull_loanLimitFigures = 1 AND [loanLimitFigures] IS NULL) OR ([loanLimitFigures] = @Original_loanLimitFigures)) AND ((@IsNull_loanOwes = 1 AND [loanOwes] IS NULL) OR ([loanOwes] = @Original_loanOwes)) AND ((@IsNull_loanOwesFigures = 1 AND [loanOwesFigures] IS NULL) OR ([loanOwesFigures] = @Original_loanOwesFigures)) AND ((@IsNull_yearsInBusiness = 1 AND [yearsInBusiness] IS NULL) OR ([yearsInBusiness] = @Original_yearsInBusiness)) AND ([datestamp] = @Original_datestamp) AND ([userInitial] = @Original_userInitial));
+SELECT accountNumber, terms, creditLimit, lastCheck, bankName, bankBranch, bankAccountNumber, bankAddress1, bankAddress2, bankPostalCode, bankCity, bankContact, bankPhone, bankFax, bankEMail, bankAverageBalance, bankAverageBalanceFigures, bankNsfActivity, bankAccountAge, creditRequired, termsOfPaymentRequired, locStatus, locLimit, locLimitFigures, locOwes, locOwesFigures, loanStatus, loanLimit, loanLimitFigures, loanOwes, loanOwesFigures, yearsInBusiness, datestamp, userInitial FROM CreditRecords WHERE (accountNumber = @accountNumber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@accountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="accountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@terms" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@creditLimit" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@lastCheck" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankBranch" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAccountNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAddress1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAddress2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@bankPostalCode" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankContact" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankPhone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankFax" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankEMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAverageBalance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAverageBalanceFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankNsfActivity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bankAccountAge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@creditRequired" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@termsOfPaymentRequired" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@locOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@loanOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@yearsInBusiness" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datestamp" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="datestamp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@userInitial" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="userInitial" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_accountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="accountNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_terms" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_terms" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="terms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_creditLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_creditLimit" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_lastCheck" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_lastCheck" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="lastCheck" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankBranch" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankBranch" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankBranch" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAccountNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAccountNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAddress1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAddress1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAddress2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAddress2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAddress2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankPostalCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_bankPostalCode" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="bankPostalCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankCity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankCity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankContact" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankContact" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankContact" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankPhone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankPhone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankPhone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankFax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankFax" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankFax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankEMail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankEMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankEMail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAverageBalance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAverageBalance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalance" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAverageBalanceFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAverageBalanceFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAverageBalanceFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankNsfActivity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankNsfActivity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankNsfActivity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bankAccountAge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bankAccountAge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bankAccountAge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_creditRequired" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_creditRequired" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="creditRequired" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_termsOfPaymentRequired" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_termsOfPaymentRequired" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="termsOfPaymentRequired" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locLimitFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locLimitFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locOwes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_locOwesFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_locOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="locOwesFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanStatus" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanLimit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanLimit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanLimitFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanLimitFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanLimitFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanOwes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanOwes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loanOwesFigures" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_loanOwesFigures" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loanOwesFigures" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_yearsInBusiness" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_yearsInBusiness" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="yearsInBusiness" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datestamp" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="datestamp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_userInitial" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="userInitial" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="accountNumber" DataSetColumn="accountNumber" />
+              <Mapping SourceColumn="terms" DataSetColumn="terms" />
+              <Mapping SourceColumn="creditLimit" DataSetColumn="creditLimit" />
+              <Mapping SourceColumn="lastCheck" DataSetColumn="lastCheck" />
+              <Mapping SourceColumn="bankName" DataSetColumn="bankName" />
+              <Mapping SourceColumn="bankBranch" DataSetColumn="bankBranch" />
+              <Mapping SourceColumn="bankAccountNumber" DataSetColumn="bankAccountNumber" />
+              <Mapping SourceColumn="bankAddress1" DataSetColumn="bankAddress1" />
+              <Mapping SourceColumn="bankAddress2" DataSetColumn="bankAddress2" />
+              <Mapping SourceColumn="bankPostalCode" DataSetColumn="bankPostalCode" />
+              <Mapping SourceColumn="bankCity" DataSetColumn="bankCity" />
+              <Mapping SourceColumn="bankContact" DataSetColumn="bankContact" />
+              <Mapping SourceColumn="bankPhone" DataSetColumn="bankPhone" />
+              <Mapping SourceColumn="bankFax" DataSetColumn="bankFax" />
+              <Mapping SourceColumn="bankEMail" DataSetColumn="bankEMail" />
+              <Mapping SourceColumn="bankAverageBalance" DataSetColumn="bankAverageBalance" />
+              <Mapping SourceColumn="bankAverageBalanceFigures" DataSetColumn="bankAverageBalanceFigures" />
+              <Mapping SourceColumn="bankNsfActivity" DataSetColumn="bankNsfActivity" />
+              <Mapping SourceColumn="bankAccountAge" DataSetColumn="bankAccountAge" />
+              <Mapping SourceColumn="creditRequired" DataSetColumn="creditRequired" />
+              <Mapping SourceColumn="termsOfPaymentRequired" DataSetColumn="termsOfPaymentRequired" />
+              <Mapping SourceColumn="locStatus" DataSetColumn="locStatus" />
+              <Mapping SourceColumn="locLimit" DataSetColumn="locLimit" />
+              <Mapping SourceColumn="locLimitFigures" DataSetColumn="locLimitFigures" />
+              <Mapping SourceColumn="locOwes" DataSetColumn="locOwes" />
+              <Mapping SourceColumn="locOwesFigures" DataSetColumn="locOwesFigures" />
+              <Mapping SourceColumn="loanStatus" DataSetColumn="loanStatus" />
+              <Mapping SourceColumn="loanLimit" DataSetColumn="loanLimit" />
+              <Mapping SourceColumn="loanLimitFigures" DataSetColumn="loanLimitFigures" />
+              <Mapping SourceColumn="loanOwes" DataSetColumn="loanOwes" />
+              <Mapping SourceColumn="loanOwesFigures" DataSetColumn="loanOwesFigures" />
+              <Mapping SourceColumn="yearsInBusiness" DataSetColumn="yearsInBusiness" />
+              <Mapping SourceColumn="datestamp" DataSetColumn="datestamp" />
+              <Mapping SourceColumn="userInitial" DataSetColumn="userInitial" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="connRAM (Settings)" DbObjectName="RAM.dbo.CreditRecords" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="getByAccountNumber" GetMethodModifier="Public" GetMethodName="getByAccountNumber" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getByAccountNumber" UserSourceName="getByAccountNumber">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM dbo.CreditRecords WHERE accountNumber=@accountNumber</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="accountNumber" ColumnName="accountNumber" DataSourceName="RAM.dbo.CreditRecords" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@accountNumber" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="accountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchemaCreditRecords" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="SchemaCreditRecords" msprop:Generator_UserDSName="SchemaCreditRecords">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CreditRecords" msprop:Generator_UserTableName="CreditRecords" msprop:Generator_RowEvArgName="CreditRecordsRowChangeEvent" msprop:Generator_TableVarName="tableCreditRecords" msprop:Generator_TablePropName="CreditRecords" msprop:Generator_RowDeletingName="CreditRecordsRowDeleting" msprop:Generator_RowChangingName="CreditRecordsRowChanging" msprop:Generator_RowDeletedName="CreditRecordsRowDeleted" msprop:Generator_TableClassName="CreditRecordsDataTable" msprop:Generator_RowChangedName="CreditRecordsRowChanged" msprop:Generator_RowEvHandlerName="CreditRecordsRowChangeEventHandler" msprop:Generator_RowClassName="CreditRecordsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="accountNumber" msprop:Generator_ColumnVarNameInTable="columnaccountNumber" msprop:Generator_ColumnPropNameInRow="accountNumber" msprop:Generator_ColumnPropNameInTable="accountNumberColumn" msprop:Generator_UserColumnName="accountNumber" type="xs:int" />
+              <xs:element name="terms" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="terms" msprop:Generator_ColumnVarNameInTable="columnterms" msprop:Generator_ColumnPropNameInTable="termsColumn" msprop:Generator_UserColumnName="terms" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creditLimit" msprop:Generator_ColumnVarNameInTable="columncreditLimit" msprop:Generator_ColumnPropNameInRow="creditLimit" msprop:Generator_ColumnPropNameInTable="creditLimitColumn" msprop:Generator_UserColumnName="creditLimit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="lastCheck" msprop:Generator_ColumnVarNameInTable="columnlastCheck" msprop:Generator_ColumnPropNameInRow="lastCheck" msprop:Generator_ColumnPropNameInTable="lastCheckColumn" msprop:Generator_UserColumnName="lastCheck" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bankName" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankName" msprop:Generator_ColumnVarNameInTable="columnbankName" msprop:Generator_ColumnPropNameInTable="bankNameColumn" msprop:Generator_UserColumnName="bankName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankBranch" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankBranch" msprop:Generator_ColumnVarNameInTable="columnbankBranch" msprop:Generator_ColumnPropNameInTable="bankBranchColumn" msprop:Generator_UserColumnName="bankBranch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAccountNumber" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAccountNumber" msprop:Generator_ColumnVarNameInTable="columnbankAccountNumber" msprop:Generator_ColumnPropNameInTable="bankAccountNumberColumn" msprop:Generator_UserColumnName="bankAccountNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAddress1" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAddress1" msprop:Generator_ColumnVarNameInTable="columnbankAddress1" msprop:Generator_ColumnPropNameInTable="bankAddress1Column" msprop:Generator_UserColumnName="bankAddress1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAddress2" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAddress2" msprop:Generator_ColumnVarNameInTable="columnbankAddress2" msprop:Generator_ColumnPropNameInTable="bankAddress2Column" msprop:Generator_UserColumnName="bankAddress2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankPostalCode" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankPostalCode" msprop:Generator_ColumnVarNameInTable="columnbankPostalCode" msprop:Generator_ColumnPropNameInTable="bankPostalCodeColumn" msprop:Generator_UserColumnName="bankPostalCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankCity" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankCity" msprop:Generator_ColumnVarNameInTable="columnbankCity" msprop:Generator_ColumnPropNameInTable="bankCityColumn" msprop:Generator_UserColumnName="bankCity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankContact" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankContact" msprop:Generator_ColumnVarNameInTable="columnbankContact" msprop:Generator_ColumnPropNameInTable="bankContactColumn" msprop:Generator_UserColumnName="bankContact" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankPhone" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankPhone" msprop:Generator_ColumnVarNameInTable="columnbankPhone" msprop:Generator_ColumnPropNameInTable="bankPhoneColumn" msprop:Generator_UserColumnName="bankPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankFax" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankFax" msprop:Generator_ColumnVarNameInTable="columnbankFax" msprop:Generator_ColumnPropNameInTable="bankFaxColumn" msprop:Generator_UserColumnName="bankFax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankEMail" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankEMail" msprop:Generator_ColumnVarNameInTable="columnbankEMail" msprop:Generator_ColumnPropNameInTable="bankEMailColumn" msprop:Generator_UserColumnName="bankEMail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAverageBalance" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAverageBalance" msprop:Generator_ColumnVarNameInTable="columnbankAverageBalance" msprop:Generator_ColumnPropNameInTable="bankAverageBalanceColumn" msprop:Generator_UserColumnName="bankAverageBalance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAverageBalanceFigures" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAverageBalanceFigures" msprop:Generator_ColumnVarNameInTable="columnbankAverageBalanceFigures" msprop:Generator_ColumnPropNameInTable="bankAverageBalanceFiguresColumn" msprop:Generator_UserColumnName="bankAverageBalanceFigures" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankNsfActivity" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankNsfActivity" msprop:Generator_ColumnVarNameInTable="columnbankNsfActivity" msprop:Generator_ColumnPropNameInTable="bankNsfActivityColumn" msprop:Generator_UserColumnName="bankNsfActivity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankAccountAge" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="bankAccountAge" msprop:Generator_ColumnVarNameInTable="columnbankAccountAge" msprop:Generator_ColumnPropNameInTable="bankAccountAgeColumn" msprop:Generator_UserColumnName="bankAccountAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creditRequired" msprop:Generator_ColumnVarNameInTable="columncreditRequired" msprop:Generator_ColumnPropNameInRow="creditRequired" msprop:Generator_ColumnPropNameInTable="creditRequiredColumn" msprop:Generator_UserColumnName="creditRequired" type="xs:decimal" minOccurs="0" />
+              <xs:element name="termsOfPaymentRequired" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="termsOfPaymentRequired" msprop:Generator_ColumnVarNameInTable="columntermsOfPaymentRequired" msprop:Generator_ColumnPropNameInTable="termsOfPaymentRequiredColumn" msprop:Generator_UserColumnName="termsOfPaymentRequired" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locStatus" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="locStatus" msprop:Generator_ColumnVarNameInTable="columnlocStatus" msprop:Generator_ColumnPropNameInTable="locStatusColumn" msprop:Generator_UserColumnName="locStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locLimit" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="locLimit" msprop:Generator_ColumnVarNameInTable="columnlocLimit" msprop:Generator_ColumnPropNameInTable="locLimitColumn" msprop:Generator_UserColumnName="locLimit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locLimitFigures" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="locLimitFigures" msprop:Generator_ColumnVarNameInTable="columnlocLimitFigures" msprop:Generator_ColumnPropNameInTable="locLimitFiguresColumn" msprop:Generator_UserColumnName="locLimitFigures" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locOwes" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="locOwes" msprop:Generator_ColumnVarNameInTable="columnlocOwes" msprop:Generator_ColumnPropNameInTable="locOwesColumn" msprop:Generator_UserColumnName="locOwes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="locOwesFigures" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="locOwesFigures" msprop:Generator_ColumnVarNameInTable="columnlocOwesFigures" msprop:Generator_ColumnPropNameInTable="locOwesFiguresColumn" msprop:Generator_UserColumnName="locOwesFigures" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loanStatus" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="loanStatus" msprop:Generator_ColumnVarNameInTable="columnloanStatus" msprop:Generator_ColumnPropNameInTable="loanStatusColumn" msprop:Generator_UserColumnName="loanStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loanLimit" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="loanLimit" msprop:Generator_ColumnVarNameInTable="columnloanLimit" msprop:Generator_ColumnPropNameInTable="loanLimitColumn" msprop:Generator_UserColumnName="loanLimit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loanLimitFigures" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="loanLimitFigures" msprop:Generator_ColumnVarNameInTable="columnloanLimitFigures" msprop:Generator_ColumnPropNameInTable="loanLimitFiguresColumn" msprop:Generator_UserColumnName="loanLimitFigures" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loanOwes" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="loanOwes" msprop:Generator_ColumnVarNameInTable="columnloanOwes" msprop:Generator_ColumnPropNameInTable="loanOwesColumn" msprop:Generator_UserColumnName="loanOwes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loanOwesFigures" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="loanOwesFigures" msprop:Generator_ColumnVarNameInTable="columnloanOwesFigures" msprop:Generator_ColumnPropNameInTable="loanOwesFiguresColumn" msprop:Generator_UserColumnName="loanOwesFigures" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="yearsInBusiness" msprop:Generator_ColumnVarNameInTable="columnyearsInBusiness" msprop:Generator_ColumnPropNameInRow="yearsInBusiness" msprop:Generator_ColumnPropNameInTable="yearsInBusinessColumn" msprop:Generator_UserColumnName="yearsInBusiness" type="xs:short" minOccurs="0" />
+              <xs:element name="datestamp" msprop:Generator_ColumnVarNameInTable="columndatestamp" msprop:Generator_ColumnPropNameInRow="datestamp" msprop:Generator_ColumnPropNameInTable="datestampColumn" msprop:Generator_UserColumnName="datestamp" type="xs:dateTime" />
+              <xs:element name="userInitial" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="userInitial" msprop:Generator_ColumnVarNameInTable="columnuserInitial" msprop:Generator_ColumnPropNameInTable="userInitialColumn" msprop:Generator_UserColumnName="userInitial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CreditRecords" />
+      <xs:field xpath="mstns:accountNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

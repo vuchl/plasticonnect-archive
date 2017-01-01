@@ -1,0 +1,43 @@
+﻿<table style="display:none;">
+	<tbody id="rowTemplate">
+		<tr>
+			<th>Product</th>
+			<th>UOM</th>
+			<th>Qty</th>
+			<th>Unit Price</th>
+		</tr>
+		<tr class='requisitionItem'>
+			<td rowspan='2' class='product'>
+				<span data='description' class='itemDescriptor'></span><br/>
+				<div class='actions'>Item Specific Actions: 
+					<a action='delete'><img src='/Content/images/delete.png' alt='delete' /></a>
+					<a action='moveUp'><img src='/Content/images/up.png' alt='move up' /></a>
+					<a action='moveDown'><img src='/Content/images/down.png' alt='move down' /></a>
+					<a action='duplicate'><img src='/Content/images/duplicate.png' alt='duplicate' /></a>
+					<a action='change'><img src='/Content/images/modify.png' alt='modify' /></a>
+				</div>
+			</td>
+			<td rowspan='2' class='uom'>
+				<select data='uom'>
+					<option>M</option>
+					<option>Rolls</option>
+					<option>Lbs</option>
+				</select>
+			</td>
+			@Html.Partial("QuantityRowCoreTemplate")
+		</tr>
+		<tr>
+			<td colspan='2'>
+				<div class='actions'>Quantity Actions: 
+					<a action='addQuantity' title='Add a new quantity'><img src='/Content/images/addQuantity.png' alt='AddQuantity' /></a>
+					<a action='minimumQuantity' title='Ask for the minimum quantity'><img src='/Content/images/minimum.png' alt='MinimumQuantity' /></a>
+					<a action='deleteQuantity' title='Delete the last quantity'><img src='/Content/images/deleteQuantity.png' alt='DeleteQuantity' /></a>
+				</div>
+			</td>
+		</tr>
+		<tr><td colspan='4' class='gap'>&nbsp;</td></tr>
+	</tbody>
+	<tbody>
+		@Html.Partial("QuantityRowTemplate")
+	</tbody>
+</table>

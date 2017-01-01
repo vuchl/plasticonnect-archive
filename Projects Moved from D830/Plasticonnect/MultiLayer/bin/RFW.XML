@@ -1,0 +1,2001 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RFW</name>
+    </assembly>
+    <members>
+        <member name="T:ROS.Schema.SchemaPrinting">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPrinting.PrintingsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPrinting.PrintingsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPrinting.PrintingsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditRecords">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditRecords.CreditRecordsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditRecords.CreditRecordsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditRecords.CreditRecordsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditRecordsTableAdapters.CreditRecordsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobDetails">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="P:UserManagement.Schemas.SchemaJobDetails.maxLengthOfValue">
+            <summary>
+            gets the maximum length of the value column
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobDetails.JobDetailDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobDetails.JobDetailRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobDetails.JobDetailRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobDetailsTableAdapters.JobDetailTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:UserManagement.JobParameter">
+            <summary>
+            Represents a parameter attached to a Job.
+            <remarks>
+            A JobParameter is a name-value pair of strings that can be added optionaly to a <see>Job</see>
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:UserManagement.JobParameter.name">
+            <summary>
+            gets the name of the parameter
+            </summary>
+        </member>
+        <member name="P:UserManagement.JobParameter.value">
+            <summary>
+            gets/sets the value of the parameter
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRecipeItem">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRecipeItem.tblPricingComponentsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRecipeItem.tblPricingComponentsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRecipeItem.tblPricingComponentsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRecipeItemTableAdapters.tblPricingComponentsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaCost">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaCost.tblCostDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaCost.tblCostRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaCost.tblCostRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaCostTableAdapters.tblCostTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.AvgPriceTrackings">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.AvgPriceTrackings.AvgPriceTrackingsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.AvgPriceTrackings.AvgPriceTrackingsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.AvgPriceTrackings.AvgPriceTrackingsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraft">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraft.DraftsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraft.DraftsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraft.DraftsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Common.Exceptions.WarningExceptions">
+            <summary>
+            thrown when a warning at the end of a process when some non-critical issue happens in the middle of the process
+            </summary>
+        </member>
+        <member name="T:Common.Exceptions.InvalidJob">
+            <summary>
+            thrown when a Job is deleted that is not in the lisr of user's jobs
+            </summary>
+        </member>
+        <member name="T:Common.WhereClause">
+            <summary>
+            Represents the whereclasue that should be used to filter a select statement
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Users">
+            <summary>
+            Summary description for Users.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Users">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Users.UsersDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Users.UsersRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Users.UsersRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._UserRole">
+            <summary>
+            Summary description for Users.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRelease">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRelease.ReleasesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRelease.ReleasesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRelease.ReleasesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:UserManagement.JobStatus">
+            <summary>
+            represents the status of a job 
+            </summary>
+        </member>
+        <member name="F:UserManagement.JobStatus.Pending">
+            <summary>
+            job is new and it is marked as Unread
+            </summary>
+        </member>
+        <member name="F:UserManagement.JobStatus.Visited">
+            <summary>
+            job has been visited but still appears on the list of jobs
+            </summary>
+        </member>
+        <member name="F:UserManagement.JobStatus.Deleted">
+            <summary>
+            job has been marked deleted and doesnot come on the job list
+            </summary>
+        </member>
+        <member name="T:UserManagement.Job">
+            <summary>
+            Represent a Job assigned to a user. Like a to-do task from the system.
+            </summary>
+        </member>
+        <member name="M:UserManagement.Job.markAsVisited">
+            <summary>
+            changes the status of job to Visited; need to be saved to affect on the database
+            </summary>
+        </member>
+        <member name="M:UserManagement.Job.save">
+            <summary>
+            applies the changes to database; it saves parameters as well
+            </summary>
+        </member>
+        <member name="M:UserManagement.Job.AddOldTypeNotification(System.Int32,System.String)">
+            <summary>
+            there are still users using the old system, RIS, and they don't check their job.
+            the following method uses an irregular way to send them a notification
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.datePosted">
+            <summary>
+            gets the date that job has been posted
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.isVisited">
+            <summary>
+            indicate if the status of the job is Visited
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.parameterCount">
+            <summary>
+            gets the number of parameters attached to the Job
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.parameters">
+            <summary>
+            gets the list of optional parameters attached to the job
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.status">
+            <summary>
+            gets status of the Job
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.title">
+            <summary>
+            gets title of the job
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.uniqueID">
+            <summary>
+            gets the uniqeID assigned to the job
+            <remarks>duplicate jobs with the same unique id will be ignored</remarks>
+            </summary>
+        </member>
+        <member name="P:UserManagement.Job.Item(System.String)">
+            <summary>
+            gets/sets a parameter for the job
+            </summary>
+            <param name="name">the name part of the parameter</param>
+            <returns>the value part of the parameter</returns>
+        </member>
+        <member name="P:UserManagement.Job.maxValuLength">
+            <summary>
+            gets the maximum length of the parameter value
+            </summary>
+        </member>
+        <member name="T:Common.RecordState">
+            <summary>
+            Indicates the state of a record in database on all the RegencyTables
+            It can be Regular, Disabled or Deleted
+            </summary>
+        </member>
+        <member name="T:Common.Config">
+            <summary>
+            This class provide developers with Connection strings to the new and old databases
+            </summary>
+        </member>
+        <member name="M:Common.Config.CleanUpString(System.String)">
+            <summary>
+            to create a clean string from input by trimming and removing double spaces
+            </summary>
+        </member>
+        <member name="M:Common.Config.FirstDateOfWeek(System.Int32,System.Int32)">
+            <summary>
+            gets the date of a week of a year
+            </summary>
+        </member>
+        <member name="P:Common.Config.Cache">
+            <summary>
+            gets the static Cache object
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExRequisitionItemNumber">
+            <summary>
+            gets the regular expression matches a requisition number
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExRequisitionItemID">
+            <summary>
+            gets the regular expression matches a requisition number
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExRequisitionReleaseNumber">
+            <summary>
+            gets the regular expression matches a release number
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExIntegerCommaSupport">
+            <summary>
+            gets the regular expression matches an integer number with or without comma separators
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExDialingNumber">
+            <summary>
+            gets the regular expression matches a North American phone/fax number;
+            it also accepts empty strings 
+            </summary>
+        </member>
+        <member name="P:Common.Config.RegExExtNumber">
+            <summary>
+            gets the regular expression matches a 1 to 4 -digit extension number;
+            it also accepts empty strings 
+            </summary>
+        </member>
+        <member name="T:Common.ErrorMessage">
+            <summary>
+            Represents a single error message 
+            </summary>
+        </member>
+        <member name="M:Common.ErrorMessage.#ctor(System.String)">
+            <summary>
+            Creates a message by it unique id
+            </summary>
+            <param name="id">Unique id of the message to be created</param>
+        </member>
+        <member name="P:Common.ErrorMessage.ID">
+            <summary>
+            Unique id of the message
+            </summary>
+        </member>
+        <member name="P:Common.ErrorMessage.title">
+            <summary>
+            Title of the message
+            </summary>
+        </member>
+        <member name="P:Common.ErrorMessage.description">
+            <summary>
+            Body of the message
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.RequisitionImages">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.RequisitionImages.RequisitionImageDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.RequisitionImages.RequisitionImageRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.RequisitionImages.RequisitionImageRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._ProductionInfo">
+            <summary>
+            Summary description for Customer.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPredefinedProducts">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPredefinedProducts.PredefinedProductsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPredefinedProducts.PredefinedProductsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPredefinedProducts.PredefinedProductsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPredefinedProductsTableAdapters.PredefinedProductsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftTableAdapters.DraftsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivitiesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivityCountersDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivitiesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivityCountersRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivitiesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivities.SalesActivityCountersRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivitiesTableAdapters.SalesActivitiesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaSalesActivitiesTableAdapters.SalesActivityCountersTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountStatistics">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountStatistics.AccountStatisticsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountStatistics.AccountStatisticsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountStatistics.AccountStatisticsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountStatisticsTableAdapters.AccountStatisticsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Warehouses">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Warehouses.WarehousesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Warehouses.WarehousesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Warehouses.WarehousesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.WarehousesTableAdapters.WarehousesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Common.WhereClauseOrStatement">
+            <summary>
+            this class is for creating sql statement concatinated with or
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.prodpkginfo">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.prodpkginfo.ProdPkgInfoDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.prodpkginfo.ProdPkgInfoRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.prodpkginfo.ProdPkgInfoRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Ingredients">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Ingredients.IngredientsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Ingredients.IngredientsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.Ingredients.IngredientsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Role">
+            <summary>
+            Summary description for Users.
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Job">
+            <summary>
+            Summary description for _Job.
+            </summary>
+        </member>
+        <member name="T:RegencySystem.UserNote">
+            <summary>
+             Represents a User_Note attached to an object
+            </summary>
+        </member>
+        <member name="M:RegencySystem.UserNote.GetNotes(RegencySystem.IUserNotable)">
+            <summary>
+            gets a collection of all user_notes attached to the object
+            </summary>
+            <param name="userNotable">the user_notable object</param>
+            <returns>a collection of the the user_notes</returns>
+        </member>
+        <member name="M:RegencySystem.UserNote.#ctor">
+            <summary>
+            empty constructor
+            </summary>
+        </member>
+        <member name="M:RegencySystem.UserNote.#ctor(System.String,System.String,RegencySystem.UserNoteScope,System.Int32)">
+            <summary>
+            create a new user_note
+            </summary>
+        </member>
+        <member name="M:RegencySystem.UserNote.SaveNotes(RegencySystem.IUserNotable)">
+            <summary>
+            inserts all new notes added to the collection. no change is applied on the previously saved notes.
+            </summary>
+        </member>
+        <member name="M:RegencySystem.UserNote.ToString">
+            <summary>
+            overridden string form of the user-note
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.Author">
+            <summary>
+            author user signature 
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.Body">
+            <summary>
+            body of the user_note
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.DateAdded">
+            <summary>
+            date-time stamp of creation
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.Id">
+            <summary>
+            database id of the user_note. (read-only)
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.ItemId">
+            <summary>
+            gets/sets the reference of the object that user_note is attached to
+            </summary>
+        </member>
+        <member name="P:RegencySystem.UserNote.Scope">
+            <summary>
+            indicate the different scope of the user_note
+            </summary>
+        </member>
+        <member name="T:Regency._RequisitionHistories">
+            <summary>
+            Summary description for _RequisitionHistories.
+            </summary>
+        </member>
+        <member name="T:Common.Information">
+            <summary>
+            Summary description for Information.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PhysicalCounts">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PhysicalCounts.PhysicalCountDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PhysicalCounts.PhysicalCountRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PhysicalCounts.PhysicalCountRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PhysicalCountsTableAdapters.PhysicalCountTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditors">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditors.CreditorsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditors.CreditorsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditors.CreditorsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaCreditorsTableAdapters.CreditorsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Authorizer">
+            <summary>
+            Summary description for AppUser.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaReleaseTableAdapters.ReleasesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaContact">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaContact.ContactsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaContact.ContactsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaContact.ContactsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaContactTableAdapters.ContactsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Plasticonnect.Common.MultiChoice">
+            <summary>
+            Gives the appropriate functionality to work with special Regency enums. These enums act as a mapping to the old database as well
+            as the regular enums. 
+            </summary>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getDescription(System.Enum)">
+            <summary>
+            gets the description assigned to the enum item. 
+            </summary>
+            <param name="value">enum item</param>
+            <returns>the assigned description to the item. returns item.ToString() if there is no description assigned</returns>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getAllOptions``1">
+            <summary>
+            gets all available choices for a specific enum.
+            </summary>
+            <remarks>This is helpful when you want to have a list like a drop down, to display all the available choices</remarks>
+            <typeparam name="T">enum type</typeparam>
+            <returns>List of all available options</returns>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getListItems``1">
+            <summary>
+            gets the Web.ListItem collection of an enum type
+            </summary>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getListItems``1(System.Collections.Generic.List{``0})">
+            <summary>
+            gets the Web.ListItem collection of an enum type
+            </summary>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getListItems``1(``0[])">
+            <summary>
+            gets the Web.ListItem collection of an enum type
+            </summary>
+        </member>
+        <member name="M:Plasticonnect.Common.MultiChoice.getByID``1(System.Int32)">
+            <summary>
+            gets an item with a specific enum ID
+            </summary>
+            <typeparam name="T">enum item</typeparam>
+            <param name="ID">provided id</param>
+            <returns>found item</returns>
+        </member>
+        <member name="T:RHR.Schema.SchemaCSR">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaCSR.CSRDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaCSR.CSRRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaCSR.CSRRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaCSRTableAdapters.CSRTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.SalesActivities">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.SalesActivities.SalesActivitiesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.SalesActivities.SalesActivitiesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Regency.Schema.SalesActivities.SalesActivitiesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.LoggingSubSystem">
+            <summary>
+            Used in logging activity
+            Defines which sub-system is performing the action
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingSubSystem.None">
+            <summary>
+            an unknown subsystem
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingSubSystem.Profile">
+            <summary>
+            Profile
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingSubSystem.Registration">
+            <summary>
+            Registration
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingSubSystem.Requisition">
+            <summary>
+            Requisition
+            </summary>
+        </member>
+        <member name="T:Regency.LoggingActionTypes">
+            <summary>
+            Indicates possible actions taht are possible throughout the execution of the system
+            This is being used to log and categorize the actions that are performed
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.None">
+            <summary>
+            un-specified action
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.CustomerAccountActivation">
+            <summary>
+            Customer Account Activation
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.CustomerAccountDenial">
+            <summary>
+            Customer Account Denial
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ExistingCustomerFirstVisit">
+            <summary>
+            Existing Customer First Visit
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.NewCustomerRegistrationRequest">
+            <summary>
+            New Customer Registration Request
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ExistingCustomerRegistrationRequest">
+            <summary>
+            Existing Customer Registration Request
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserLogin">
+            <summary>
+            User Login
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserLogout">
+            <summary>
+            User Logout
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.BillingInfoUpdated">
+            <summary>
+            Billing Info updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.BuyerPersonUpdated">
+            <summary>
+            Buyer Contact updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.AccountPayableUpdated">
+            <summary>
+            Account Payable Contact updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ContactAdded">
+            <summary>
+            New Contact added
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ContactUpdated">
+            <summary>
+            Contact Updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ContactDeleted">
+            <summary>
+            Contact Deleted
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ShippingAddressAdded">
+            <summary>
+            New Shipping Address added
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ShippingAddressUpdated">
+            <summary>
+            Shipping Address updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ShippingAddressDeleted">
+            <summary>
+            Shipping Address deleted
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserAdded">
+            <summary>
+            New User added
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserUpdated">
+            <summary>
+            User updated
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserDeleted">
+            <summary>
+            User deleted
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ProfileDisplayed">
+            <summary>
+            Profile Displayed
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.UserSessionTimedOut">
+            <summary>
+            User Session Timeout occured
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.DraftCreated">
+            <summary>
+            New Draft created
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.DraftCanceled">
+            <summary>
+            Draft Cancelled
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuotePriced">
+            <summary>
+            Quote has been priced
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuoteSent">
+            <summary>
+            Quote has been sent
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuoteExpired">
+            <summary>
+            Quote expired
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuoteRePriceRequested">
+            <summary>
+            Re-Price requested
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.RequisitionItemPriced">
+            <summary>
+            Item Priced
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuoteOrderCopiedToRegency">
+            <summary>
+            Requisition copied from RegencyRef to Regency
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.OrderApproved">
+            <summary>
+            Order approved
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.OrderClosed">
+            <summary>
+            Order closed
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ItemAddedToDraf">
+            <summary>
+            Item added to Draft
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.ProductCreated">
+            <summary>
+            Product created
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.DraftSubmit">
+            <summary>
+            Draft submitted
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.SaveRelease">
+            <summary>
+            Release has been saved
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.DeleteRelease">
+            <summary>
+            Release has been deleted
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.IssueRelease">
+            <summary>
+            Release has been issued
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.AddRelease">
+            <summary>
+            New Release added
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.AccountStatusChanged">
+            <summary>
+            Account Status changed
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.QuoteDismissed">
+            <summary>
+            Quote Dismissed
+            </summary>
+        </member>
+        <member name="F:Regency.LoggingActionTypes.AccountsMerged">
+            <summary>
+            Account Mergeds
+            </summary>
+        </member>
+        <member name="T:Regency.Log">
+            <summary>
+            Log class offer all the functionality needed for logging an action 
+            </summary>
+        </member>
+        <member name="M:Regency.Log.#ctor">
+            <summary>
+            Creates a blank log
+            </summary>
+        </member>
+        <member name="M:Regency.Log.#ctor(System.Int32)">
+            <summary>
+            Retreive the log info and creates a log object based on the log id
+            </summary>
+            <param name="pID">ID of the log to be retreived</param>
+        </member>
+        <member name="M:Regency.Log.Save">
+            <summary>
+            Saves the changes on the database.
+            </summary>
+        </member>
+        <member name="P:Regency.Log.userName">
+            <summary>
+            Name of the user that has performed the action
+            </summary>
+        </member>
+        <member name="P:Regency.Log.action">
+            <summary>
+            Action that has been performed
+            </summary>
+        </member>
+        <member name="P:Regency.Log.appplication">
+            <summary>
+            Application that has done the action
+            </summary>
+        </member>
+        <member name="P:Regency.Log.description">
+            <summary>
+            An optional descrioption for the log
+            </summary>
+        </member>
+        <member name="P:Regency.Log.logTimeStamp">
+            <summary>
+            Gets the log date/time
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaSalesRepImages">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaSalesRepImages.salesRepImageDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaSalesRepImages.salesRepImageRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaSalesRepImages.salesRepImageRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:RHR.Schema.SchemaSalesRepImagesTableAdapters.salesRepImageTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.RawMaterialsTableAdapters.RawMaterialsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.RawMaterials">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.RawMaterials.RawMaterialsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.RawMaterials.RawMaterialsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.RawMaterials.RawMaterialsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Jobs">
+            <summary>
+            Summary description for _Jobs.
+            </summary>
+        </member>
+        <member name="M:Regency.Persistent._Jobs.FillByUserNoteID(System.Int32)">
+            <summary>
+            this returns all the jobs related to a usernote
+            </summary>
+            <param name="userNoteID"></param>
+        </member>
+        <member name="T:Regency.Persistent._ErrorMessage">
+            <summary>
+            Summary description for SalesRep.
+            </summary>
+        </member>
+        <member name="T:RegencySystem.IUserNotable">
+            <summary>
+            Indicates if the object can accept user_notes
+            </summary>
+        </member>
+        <member name="M:RegencySystem.IUserNotable.Add(RegencySystem.UserNote)">
+            <summary>
+            Adds a new User_Note to the object; the Save() method will apply the changes to the database
+            </summary>
+            <param name="userNote">a new user_note to be added</param>
+        </member>
+        <member name="M:RegencySystem.IUserNotable.SaveUserNotes">
+            <summary>
+            inserts all the new notes added to the object
+            </summary>
+        </member>
+        <member name="M:RegencySystem.IUserNotable.GetUserNotes(RegencySystem.UserNoteScope)">
+            <summary>
+            gets a list of existing user_notes with a specific scope
+            </summary>
+        </member>
+        <member name="M:RegencySystem.IUserNotable.RefreshUserNotes">
+            <summary>
+            forces the object to refresh its contents from database<br/>
+            this is usefull when you are not sure if a new user_note added while caching the object.
+            </summary>
+        </member>
+        <member name="P:RegencySystem.IUserNotable.UserNoteGroupId">
+            <summary>
+            GroupId or type of the object.
+            </summary>
+            <remarks>
+            <see cref="T:RegencySystem.UserNote"/>s can be added to different types of objects. To distinguish between the
+            different types, any class that implements <see cref="T:RegencySystem.IUserNotable"/> must present a unique 3-character
+            identifier in the domain of <see cref="T:RegencySystem.UserNote"/> usage.
+            </remarks>
+        </member>
+        <member name="P:RegencySystem.IUserNotable.UserNoteItemId">
+            <summary>
+            the unique id of the object must be implemented
+            </summary>
+        </member>
+        <member name="P:RegencySystem.IUserNotable.UserNotes">
+            <summary>
+            gets a list of existing user_notes
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Ingredients">
+            <summary>
+            Summary description for _Ingredients.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftItem">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftItem.DraftItemsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftItem.DraftItemsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="M:ROS.Schema.SchemaDraftItem.DraftItemsRow.Save">
+            <summary>
+            applies all changes to the database
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataRegencyRefId">
+            <summary>
+            ID of the equivalent of this requisitionItem in the old system's database (OrderDetailNumber)
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataDefaultFob">
+            <summary>
+            gets the default FOB of the item. <br />
+            is used for new releases to be add.
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataDeliveryType">
+            <summary>
+            gets the delivery type of the item
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataComments">
+            <summary>
+            Optional comments on RequisitionItems
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataItemOrdinal">
+            <summary>
+            gets the item serial number in the field of Requisition Items
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataMaxReleaseDate">
+            <summary>
+            Maximum date that a release of the item can be set
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataOwnerID">
+            <summary>
+            Unique id of the requisition that the item belongs to
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataPricingNote">
+            <summary>
+            Optional notes about pricing
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataQuantity">
+            <summary>
+            Quantity of the product
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataUnitPrice">
+            <summary>
+            gets unit price of the item
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaDraftItem.DraftItemsRow.DataUom">
+            <summary>
+            Unit of measurement
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftItem.DraftItemsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaDraftItemTableAdapters.DraftItemsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccounts">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccounts.AccountsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccounts.AccountsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccounts.AccountsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAccountsTableAdapters.AccountsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Common.errorMessageStruct">
+            <summary>
+            Represents the result of a validation rule 
+            </summary>
+        </member>
+        <member name="F:Common.errorMessageStruct.code">
+            <summary>
+            Code of the message that is the result of the validation
+            </summary>
+        </member>
+        <member name="F:Common.errorMessageStruct.text">
+            <summary>
+            Body of the message
+            </summary>
+        </member>
+        <member name="M:Common.errorMessageStruct.#ctor">
+            <summary>
+            Creates an empty error message
+            </summary>
+        </member>
+        <member name="T:Common.Rule">
+            <summary>
+            Represents a delegate that represents a rule to be executed 
+            when ValidationRules.validate method is called
+            </summary>
+        </member>
+        <member name="T:Common.Validator">
+            <summary>
+            Represents a collection of validation rules that should be validated
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PriceChoices">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PriceChoices.PriceChoicesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PriceChoices.PriceChoicesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PriceChoices.PriceChoicesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.PriceChoicesTableAdapters.PriceChoicesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRequisition">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRequisition.RequisitionDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRequisition.RequisitionRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRequisition.RequisitionRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaRequisitionTableAdapters.RequisitionTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaFormulaRule">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaFormulaRule.FormulaRulesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaFormulaRule.FormulaRulesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaFormulaRule.FormulaRulesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaFormulaRuleTableAdapters.FormulaRulesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAddresses">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAddresses.AddressesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAddresses.AddressesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAddresses.AddressesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Crm.DataAccess.SchemaAddressesTableAdapters.AddressesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Transactions">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Transactions.TransactionsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Transactions.TransactionsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:RMI.Schema.Transactions.TransactionsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.SalesActivityResult">
+            <summary>
+            Offers type of Activity Result
+            This class is being derived from Option class and also offers a list 
+            of available Activity results from options.xml file
+            Possible values are as following
+            	Result Of the SalesActivity (can be 
+            	DSC: Did not speak with customer, 
+            	SWC: Spoke with customer, 
+            	RSH: rescheduled
+            </summary>
+        </member>
+        <member name="T:System.Schema.SchemaUserNotes">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:System.Schema.SchemaUserNotes.UserNotesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:System.Schema.SchemaUserNotes.UserNotesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:System.Schema.SchemaUserNotes.UserNotesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency._RequisitionHistory">
+            <summary>
+            Summary description for _Requistion.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaProduct">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaProduct.ProductsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaProduct.ProductsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.BundleDataFormatter.DbString">
+            <summary>
+            Returns a string that represents the Bundle in database
+            </summary>
+            <returns>Format of the return string is: bundle-type;Number of Bags;Wicket Size</returns>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.HolesDataFormatter.HoleSize">
+            <summary>
+            gets/set the size/shape of the holes
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.HolesDataFormatter.Quantity">
+            <summary>
+            gets/set the quantity of the holes on the products
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.HolesDataFormatter.Comments">
+            <summary>
+            gets/sets additional comments in regards to the Holes
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.MicroventsDataFormatter.Type">
+            <summary>
+            gets/sets the type of the <see cref="P:ROS.Schema.SchemaProduct.ProductsRow.Microvents"/>
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.MicroventsDataFormatter.Comments">
+            <summary>
+            additional comments in regards to <see cref="P:ROS.Schema.SchemaProduct.ProductsRow.Microvents"/>
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasAntiBlock">
+            <summary>
+            indicates if product is anti-block
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasAntiStatic">
+            <summary>
+            indicates if product is anti-static
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasFoodFlex">
+            <summary>
+            indicates if product is food-flex
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasShrink">
+            <summary>
+            indicates if product is shrink
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasVirginMaterial">
+            <summary>
+            indicates if product uses virgin materials only
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasHighImpact">
+            <summary>
+            indicates if product is high-impact
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.ChemicalAdditivesDataFormatter.HasUtility">
+            <summary>
+            indicates if product is utility
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.GussetDataFormatter.Orientation">
+            <summary>
+            gets/set the orientation of the gusset. it could be side-gusset or bottom-gusset or no-gusset.
+            notes: if you set the value of Orientation to no-gusset, the size will be change to 0.
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.GussetDataFormatter.Size">
+            <summary>
+            gets/sets the size of the Gusset 
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.LipHoodDataFormatter.Type">
+            <summary>
+            gets/sets the type of the Lip or Hood of the product
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.LipHoodDataFormatter.LipSize">
+            <summary>
+            gets/set the size of lip in inches
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.LipHoodDataFormatter.HoodSize">
+            <summary>
+            gets/set the size of hood in inches
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.GaugeDataFormatter.Size">
+            <summary>
+            Size of the <see cref="P:ROS.Schema.SchemaProduct.ProductsRow.Gauge"/>
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.GaugeDataFormatter.FullGauge">
+            <summary>
+            Indicates whether the gauge is full or not
+            </summary>
+        </member>
+        <member name="M:ROS.Schema.SchemaProduct.ProductsRow.FoldingDataFormatter.#ctor(System.String)">
+            <summary>
+            Creates a FoldingDataFormatter object from a string that has been read from database
+            </summary>
+            <param name="dbString">A string that represents the <see cref="!:FoldingInfo"/> on database</param>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.FoldingDataFormatter.DbString">
+             <summary>
+             Creates a string that represents the FoldingType on database
+             </summary>
+             <returns>Returns the string that represents the FoldingType on database
+             The format of the string is as following:
+            		foldTypeId;slitPositionId;woundTypeId;(1 id trimmed 0 if not)
+            </returns>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.FoldingDataFormatter.FoldType">
+            <summary>
+            Indicates the type of folding
+            For possible values refer to FoldType
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.FoldingDataFormatter.SlitPosition">
+            <summary>
+            Indicates the position on the product that slitting should occur
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.FoldingDataFormatter.Trimmed">
+            <summary>
+            Indicates whether the product should be trimmed or not
+            </summary>
+        </member>
+        <member name="M:ROS.Schema.SchemaProduct.ProductsRow.UserRequestDataFormatter.#ctor(System.String)">
+            <summary>
+            Creates a UserRequest object with a string that represents the UserRequest in database.
+            The string format is as following: UserRequestType;Value
+            </summary>
+            <param name="dbString">The string that represents the UserRequest in database.
+            The string format is as following: UserRequestType;Value</param>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.UserRequestDataFormatter.DbString">
+            <summary>
+            Returns a string that should be saved on the database as UserRequest
+            </summary>
+            <returns>A string that represents the UserRequest object on database.</returns>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.UserRequestDataFormatter.Type">
+            <summary>
+            Represents the <see cref="T:Plasticonnect.DataProvider.PackagingType"/>
+            Some example can be LbPerRoll, LnFtPerRoll, ...
+            </summary>
+        </member>
+        <member name="P:ROS.Schema.SchemaProduct.ProductsRow.UserRequestDataFormatter.Value">
+            <summary>
+            The value of the <see cref="P:ROS.Schema.SchemaProduct.ProductsRow.UserRequest"/>
+            For example this indicate how many pound per roll (if the userRequestOption is LbPerRoll)
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaProduct.ProductsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaProductTableAdapters.ProductsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobs">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobs.JobsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobs.JobsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobs.JobsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:UserManagement.Schemas.SchemaJobsTableAdapters.JobsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.products">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.products.ProductsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.products.ProductsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Unorganized.Schema.products.ProductsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Regency.Persistent._Log">
+            <summary>
+            Summary description for RegistrationLog.
+            </summary>
+        </member>
+        <member name="T:Common.DialingNumber">
+            <summary>
+            Used for formatting a dialing number
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.overSeas">
+            <summary>
+            indicates if the number is an over seas number (out of North America)
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.longDistance">
+            <summary>
+            indicates if the number is a long distance; ( 1 is required before dialing )
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.countryCode">
+            <summary>
+            country code (for overseas numbers)
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.areaCode">
+            <summary>
+            3-digit area code
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.localNumber">
+            <summary>
+            7-digit local number
+            </summary>
+        </member>
+        <member name="F:Common.DialingNumber.ext">
+            <summary>
+            extension number
+            </summary>
+        </member>
+        <member name="M:Common.DialingNumber.Format(System.String)">
+            <summary>
+            Used for formatting an string as a dialing number
+            </summary>
+            <param name="input_string">Should include a number to be formatted</param>
+            <returns>The formatted phone number</returns>
+        </member>
+        <member name="M:Common.DialingNumber.#ctor">
+            <summary>
+            Creates an empty DialingNumber object
+            </summary>
+        </member>
+        <member name="M:Common.DialingNumber.#ctor(System.String)">
+            <summary>
+            Creates a DialingNumber object by a string that contains a phone number
+            </summary>
+            <param name="phone">Phonenumber that is the base of the dialingnumber object</param>
+        </member>
+        <member name="M:Common.DialingNumber.ToString">
+            <summary>
+            Incorporates all the formatting and returns the formatted phone number
+            </summary>
+            <returns>The formatted phone number</returns>
+        </member>
+        <member name="P:Common.DialingNumber.PlainFormat">
+            <summary>
+            Returns only the digits contained in the phone number
+            </summary>
+        </member>
+        <member name="P:Common.DialingNumber.IsOverSeas">
+            <summary>
+            Indicates whether the phone number is an overseas number 
+            </summary>
+        </member>
+        <member name="P:Common.DialingNumber.IsLongDistance">
+            <summary>
+            Indicates whether the phone number is long distance
+            </summary>
+        </member>
+        <member name="P:Common.DialingNumber.CountryCode">
+            <summary>
+            Returns the country code
+            </summary>
+        </member>
+        <member name="P:Common.DialingNumber.AreaCode">
+            <summary>
+            Returns the area code
+            </summary>
+        </member>
+        <member name="P:Common.DialingNumber.LocalNumber">
+            <summary>
+            Returns the local number 
+            </summary>
+        </member>
+        <member name="T:Common.PhoneNumber">
+            <summary>
+            Used for formatting a telephone number
+            </summary>
+        </member>
+        <member name="T:Common.FaxNumber">
+            <summary>
+            Used for formatting a fax number
+            </summary>
+        </member>
+        <member name="T:Common.RegencyCalendar">
+            <summary>
+            Contains date methods
+            </summary>
+        </member>
+        <member name="M:Common.RegencyCalendar.GetBusinessDay(System.DateTime)">
+            <summary>
+            Is used to get the business day 
+            </summary>
+            <param name="dtSource">The source date</param>
+            <returns>If the source date is a business day it returns the source 
+            date otherwise returns the next busness day after source date</returns>
+        </member>
+        <member name="T:Common.randomPasswordGenerator">
+            <summary>
+            Can be used to generate a random string of characters 
+            that can be used for a password
+            </summary>
+        </member>
+        <member name="M:Common.randomPasswordGenerator.Generate(System.Boolean)">
+            <summary>
+            Generates a random password.
+            </summary>
+            <returns>
+            Randomly generated password.
+            </returns>
+            <remarks>
+            The length of the generated password will be determined at
+            random. It will be no shorter than the minimum default and
+            no longer than maximum default.
+            </remarks>
+        </member>
+        <member name="M:Common.randomPasswordGenerator.Generate(System.Int32,System.Boolean)">
+            <summary>
+            Generates a random password of the exact length.
+            </summary>
+            <param name="length">Exact password length.</param>
+            <param name="numericOnly">Generate numeric only password</param>
+            <returns>
+            Randomly generated password.
+            </returns>
+        </member>
+        <member name="M:Common.randomPasswordGenerator.Generate(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Generates a random password.
+            </summary>
+            <param name="minLength">Minimum password length.</param>
+            <param name="maxLength">Maximum password length.</param>
+            <param name="numberOnly"> generate numeric only password</param>
+            <returns>
+            Randomly generated password.
+            </returns>
+            <remarks>
+            The length of the generated password will be determined at
+            random and it will fall with the range determined by the
+            function parameters.
+            </remarks>
+        </member>
+        <member name="T:System.Schema.SchemaUserNotesTableAdapters.UserNotesTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:RegencySystem.UserNoteScope">
+            <summary>
+            Defines the privilege of a <see cref="T:RegencySystem.UserNote"/>
+            </summary>
+        </member>
+        <member name="F:RegencySystem.UserNoteScope.Public">
+            <summary>
+            public UserNotes are visible to every one
+            </summary>
+        </member>
+        <member name="F:RegencySystem.UserNoteScope.Private">
+            <summary>
+            private UserNotes are visible to the authorized people only
+            </summary>
+        </member>
+        <member name="T:ROS.Schema.SchemaPrintingTableAdapters.PrintingsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+    </members>
+</doc>

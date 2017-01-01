@@ -1,0 +1,173 @@
+<!Doctype>
+<html>
+<head>
+	<title>RFQ</title>
+	<link rel="StyleSheet" href='http://www.lastsignal.com/themes/simple/main.css' />
+	<link rel="StyleSheet" href='requisition.css' />
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="jquery.validate.min.js" type="text/javascript"></script>
+	<script  type="text/javascript"src="rfq.js"></script>
+<style type='text/css'>
+
+body {
+	width: 8.5in;
+	margin: auto;
+}
+
+body > table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+</style>
+<script type='text/javascript'>
+	var dialogWidths = {
+		'PtoBag': '400px',
+		'Sheeting': '300px'
+	};
+		
+
+function productToString(product) {
+//todo: toString should be transferred to the server side with an ajax call
+	var ret = "";
+	
+	switch(product.type) {
+		case 'PtoBag':
+			ret = 'PTO Bag; ';
+			
+			ret += product.width  + ' x ';
+			if(product.hasGusset) {
+				ret += product.gusset.size;
+				ret += product.gusset.orientation + ' x ';
+			}
+			
+			ret += product.length + ' x ';
+			ret += product.gauge.size;
+			if(product.gauge.isFull) {
+				ret += ' (Full)';
+			}
+			break;
+				
+		case 'Sheeting':
+			ret = 'Sheeting; ';
+
+			ret += product.width  + ' x ';
+			ret += product.gauge.size;
+			if(product.gauge.isFull) {
+				ret += ' (Full)';
+			}
+			break;
+	}
+	return ret;
+}
+
+var dataSource = [
+	{
+		product: {
+			type: 'PtoBag',
+			width: 12.0,
+			length: 24.0,
+			hasGusset: true,
+			gusset: {
+				size: 2.0,
+				orientation: '(B)'
+				},
+			gauge: {
+				size: .001,
+				isFull: false
+				}	
+		},
+		uom: 'M',
+		quantityList: [
+			{ quantity: 1000, unitPrice: '' },
+			{ quantity: 2000, unitPrice: '' },
+			{ quantity: 3000, unitPrice: '' },
+		]
+	},
+	{
+		product: {
+			type:  'Sheeting',
+			width: 32.0,
+			gauge: {
+				size: .00075,
+				isFull: false
+				},	
+			folding: 'J'
+		},
+		uom: 'Lbs',
+		quantityList: [
+			{ quantity: -1, unitPrice: '' },
+		]
+	}];
+	
+</script>
+</head>
+
+<body>
+<table>
+<tr>
+	<td rowspan='3'><h1>Request for Quote</h1></td>
+	<td class='prompt' style='text-align: right'>RFQ Number:</td>
+	<td style='text-align: right'>2902-435-2145</td>
+</tr>
+<tr>
+	<td class='prompt' style='text-align: right'>Issue Date:</td>
+	<td style='text-align: right'>Feb 3, 2011</td>
+</tr>
+<tr>
+	<td class='prompt' style='text-align: right'>Deadline:</td>
+	<td style='text-align: right'>Feb 13, 2011</td>
+</tr>
+</table>
+<table>
+<tr class='titler'>
+	<td class='prompt'>Buyer:</td>
+	<td class='prompt'>Delivery:</td>
+</tr>
+<tr>
+	<td>
+		ABC Co Ltd.<br />
+		123 Blank Street,<br />
+		Toronto, Ontario, M1M 1M1<br />
+		<span class='prompt'>Contact:</span> John Doe @ (416) 888-8888 x 123
+	</td>
+	<td>
+		<table>
+			<tr>
+				<td class='prompt' style='text-align: right'>Requested Date:</td>
+				<td>Varies by item</td>
+			</tr>
+			<tr>
+				<td class='prompt' style='text-align: right'>FOB:</td>
+				<td>Destination</td>
+			</tr>
+			<tr>
+				<td class='prompt' style='text-align: right'>Ship to:</td>
+				<td>M1M 1M1</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr class='titler'>
+	<td colspan='2'><span class='prompt'>Requested Term:</span> Net 30</td>
+</tr>
+</table>
+<table id='mainRequisition' class='simple requisition'>
+</table>
+<div class='actions'>
+	<select id='productSelector'>
+		<option value='-1' selected='selected'>Select Product...</option>
+		<option value='ptoBag'>PTO Bag</option>
+		<option value='sheeting'>Sheeting</option>
+	</select>
+	<img src='images/addNewItem.png' />
+</div>
+<div id='productDialog' class='dialog'>
+</div>
+<a id='submit'>Submit</a>
+<div id='dump' style='padding: 15px; border: 1px solid cyan; margin: 15px'>
+</div>
+</body>
+</html>

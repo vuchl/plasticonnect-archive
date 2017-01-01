@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchemaAccountStatistics" targetNamespace="http://tempuri.org/SchemaAccountStatistics.xsd" xmlns:mstns="http://tempuri.org/SchemaAccountStatistics.xsd" xmlns="http://tempuri.org/SchemaAccountStatistics.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="connRAM" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connRAM (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Plasticonnect.DataAccess.Properties.Settings.GlobalReference.Default.connRAM" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountStatisticsTableAdapter" GeneratorDataComponentClassName="AccountStatisticsTableAdapter" Name="AccountStatistics" UserDataComponentName="AccountStatisticsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connRAM (Settings)" DbObjectName="RAM.dbo.AccountStatistics" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AccountNumber, requisitionCount, salesActivityCount, predefinedProductCount, shipToAddressCount, userNoteCount, invoiceCount, firstQuote, lastQuote, lastOrder, lastSalesActivityID, lastSalesActivityDate, [$orderedThisYear], [$orderedLastYear], [$ordered2YearsAgo], [$ordered3YearsAgo], [$ordered4YearsAgo], [$ordered5YearsAgo], [$ordered6YearsAgo], [$ordered7YearsAgo], [$ordered8YearsAgo], [$ordered9YearsAgo] FROM dbo.AccountStatistics</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccountNumber" DataSetColumn="AccountNumber" />
+              <Mapping SourceColumn="requisitionCount" DataSetColumn="requisitionCount" />
+              <Mapping SourceColumn="salesActivityCount" DataSetColumn="salesActivityCount" />
+              <Mapping SourceColumn="predefinedProductCount" DataSetColumn="predefinedProductCount" />
+              <Mapping SourceColumn="shipToAddressCount" DataSetColumn="shipToAddressCount" />
+              <Mapping SourceColumn="userNoteCount" DataSetColumn="userNoteCount" />
+              <Mapping SourceColumn="invoiceCount" DataSetColumn="invoiceCount" />
+              <Mapping SourceColumn="firstQuote" DataSetColumn="firstQuote" />
+              <Mapping SourceColumn="lastQuote" DataSetColumn="lastQuote" />
+              <Mapping SourceColumn="lastOrder" DataSetColumn="lastOrder" />
+              <Mapping SourceColumn="lastSalesActivityID" DataSetColumn="lastSalesActivityID" />
+              <Mapping SourceColumn="lastSalesActivityDate" DataSetColumn="lastSalesActivityDate" />
+              <Mapping SourceColumn="$orderedThisYear" DataSetColumn="$orderedThisYear" />
+              <Mapping SourceColumn="$orderedLastYear" DataSetColumn="$orderedLastYear" />
+              <Mapping SourceColumn="$ordered2YearsAgo" DataSetColumn="$ordered2YearsAgo" />
+              <Mapping SourceColumn="$ordered3YearsAgo" DataSetColumn="$ordered3YearsAgo" />
+              <Mapping SourceColumn="$ordered4YearsAgo" DataSetColumn="$ordered4YearsAgo" />
+              <Mapping SourceColumn="$ordered5YearsAgo" DataSetColumn="$ordered5YearsAgo" />
+              <Mapping SourceColumn="$ordered6YearsAgo" DataSetColumn="$ordered6YearsAgo" />
+              <Mapping SourceColumn="$ordered7YearsAgo" DataSetColumn="$ordered7YearsAgo" />
+              <Mapping SourceColumn="$ordered8YearsAgo" DataSetColumn="$ordered8YearsAgo" />
+              <Mapping SourceColumn="$ordered9YearsAgo" DataSetColumn="$ordered9YearsAgo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="connRAM (Settings)" DbObjectName="RAM.dbo.AccountStatistics" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="getByAccountNumber" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="getByAccountNumber" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getByAccountNumber" UserSourceName="getByAccountNumber">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccountNumber, requisitionCount, salesActivityCount, predefinedProductCount, shipToAddressCount, userNoteCount, invoiceCount, firstQuote, lastQuote, lastOrder, lastSalesActivityID, lastSalesActivityDate, [$orderedThisYear], [$orderedLastYear], [$ordered2YearsAgo], [$ordered3YearsAgo], [$ordered4YearsAgo], [$ordered5YearsAgo], [$ordered6YearsAgo], [$ordered7YearsAgo], [$ordered8YearsAgo], [$ordered9YearsAgo] FROM dbo.AccountStatistics
+WHERE AccountNumber = @AccountNumber</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccountNumber" ColumnName="AccountNumber" DataSourceName="RAM.dbo.AccountStatistics" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@AccountNumber" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="AccountNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchemaAccountStatistics" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="SchemaAccountStatistics" msprop:Generator_UserDSName="SchemaAccountStatistics">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountStatistics" msprop:Generator_TableClassName="AccountStatisticsDataTable" msprop:Generator_RowEvArgName="AccountStatisticsRowChangeEvent" msprop:Generator_TableVarName="tableAccountStatistics" msprop:Generator_TablePropName="AccountStatistics" msprop:Generator_RowDeletingName="AccountStatisticsRowDeleting" msprop:Generator_UserTableName="AccountStatistics" msprop:Generator_RowChangingName="AccountStatisticsRowChanging" msprop:Generator_RowDeletedName="AccountStatisticsRowDeleted" msprop:Generator_RowChangedName="AccountStatisticsRowChanged" msprop:Generator_RowEvHandlerName="AccountStatisticsRowChangeEventHandler" msprop:Generator_RowClassName="AccountStatisticsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" type="xs:int" />
+              <xs:element name="requisitionCount" msprop:Generator_ColumnVarNameInTable="columnrequisitionCount" msprop:Generator_ColumnPropNameInRow="requisitionCount" msprop:Generator_ColumnPropNameInTable="requisitionCountColumn" msprop:Generator_UserColumnName="requisitionCount" type="xs:int" minOccurs="0" />
+              <xs:element name="salesActivityCount" msprop:Generator_ColumnVarNameInTable="columnsalesActivityCount" msprop:Generator_ColumnPropNameInRow="salesActivityCount" msprop:Generator_ColumnPropNameInTable="salesActivityCountColumn" msprop:Generator_UserColumnName="salesActivityCount" type="xs:int" minOccurs="0" />
+              <xs:element name="predefinedProductCount" msprop:Generator_ColumnVarNameInTable="columnpredefinedProductCount" msprop:Generator_ColumnPropNameInRow="predefinedProductCount" msprop:Generator_ColumnPropNameInTable="predefinedProductCountColumn" msprop:Generator_UserColumnName="predefinedProductCount" type="xs:int" minOccurs="0" />
+              <xs:element name="shipToAddressCount" msprop:Generator_ColumnVarNameInTable="columnshipToAddressCount" msprop:Generator_ColumnPropNameInRow="shipToAddressCount" msprop:Generator_ColumnPropNameInTable="shipToAddressCountColumn" msprop:Generator_UserColumnName="shipToAddressCount" type="xs:int" minOccurs="0" />
+              <xs:element name="userNoteCount" msprop:Generator_ColumnVarNameInTable="columnuserNoteCount" msprop:Generator_ColumnPropNameInRow="userNoteCount" msprop:Generator_ColumnPropNameInTable="userNoteCountColumn" msprop:Generator_UserColumnName="userNoteCount" type="xs:int" minOccurs="0" />
+              <xs:element name="invoiceCount" msprop:Generator_ColumnVarNameInTable="columninvoiceCount" msprop:Generator_ColumnPropNameInRow="invoiceCount" msprop:Generator_ColumnPropNameInTable="invoiceCountColumn" msprop:Generator_UserColumnName="invoiceCount" type="xs:int" minOccurs="0" />
+              <xs:element name="firstQuote" msprop:Generator_ColumnVarNameInTable="columnfirstQuote" msprop:Generator_ColumnPropNameInRow="firstQuote" msprop:Generator_ColumnPropNameInTable="firstQuoteColumn" msprop:Generator_UserColumnName="firstQuote" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lastQuote" msprop:Generator_ColumnVarNameInTable="columnlastQuote" msprop:Generator_ColumnPropNameInRow="lastQuote" msprop:Generator_ColumnPropNameInTable="lastQuoteColumn" msprop:Generator_UserColumnName="lastQuote" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lastOrder" msprop:Generator_ColumnVarNameInTable="columnlastOrder" msprop:Generator_ColumnPropNameInRow="lastOrder" msprop:Generator_ColumnPropNameInTable="lastOrderColumn" msprop:Generator_UserColumnName="lastOrder" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lastSalesActivityID" msprop:Generator_ColumnVarNameInTable="columnlastSalesActivityID" msprop:Generator_ColumnPropNameInRow="lastSalesActivityID" msprop:Generator_ColumnPropNameInTable="lastSalesActivityIDColumn" msprop:Generator_UserColumnName="lastSalesActivityID" type="xs:int" minOccurs="0" />
+              <xs:element name="lastSalesActivityDate" msprop:Generator_ColumnVarNameInTable="columnlastSalesActivityDate" msprop:Generator_ColumnPropNameInRow="lastSalesActivityDate" msprop:Generator_ColumnPropNameInTable="lastSalesActivityDateColumn" msprop:Generator_UserColumnName="lastSalesActivityDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_x0024_orderedThisYear" msprop:Generator_ColumnVarNameInTable="_column_orderedThisYear" msprop:Generator_ColumnPropNameInRow="__orderedThisYear" msprop:Generator_ColumnPropNameInTable="__orderedThisYearColumn" msprop:Generator_UserColumnName="$orderedThisYear" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_orderedLastYear" msprop:Generator_ColumnVarNameInTable="_column_orderedLastYear" msprop:Generator_ColumnPropNameInRow="__orderedLastYear" msprop:Generator_ColumnPropNameInTable="__orderedLastYearColumn" msprop:Generator_UserColumnName="$orderedLastYear" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered2YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered2YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered2YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered2YearsAgoColumn" msprop:Generator_UserColumnName="$ordered2YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered3YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered3YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered3YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered3YearsAgoColumn" msprop:Generator_UserColumnName="$ordered3YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered4YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered4YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered4YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered4YearsAgoColumn" msprop:Generator_UserColumnName="$ordered4YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered5YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered5YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered5YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered5YearsAgoColumn" msprop:Generator_UserColumnName="$ordered5YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered6YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered6YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered6YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered6YearsAgoColumn" msprop:Generator_UserColumnName="$ordered6YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered7YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered7YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered7YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered7YearsAgoColumn" msprop:Generator_UserColumnName="$ordered7YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered8YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered8YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered8YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered8YearsAgoColumn" msprop:Generator_UserColumnName="$ordered8YearsAgo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0024_ordered9YearsAgo" msprop:Generator_ColumnVarNameInTable="_column_ordered9YearsAgo" msprop:Generator_ColumnPropNameInRow="__ordered9YearsAgo" msprop:Generator_ColumnPropNameInTable="__ordered9YearsAgoColumn" msprop:Generator_UserColumnName="$ordered9YearsAgo" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ingredients" targetNamespace="http://tempuri.org/Ingredients.xsd" xmlns:mstns="http://tempuri.org/Ingredients.xsd" xmlns="http://tempuri.org/Ingredients.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ingredients" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ingredients" msprop:Generator_DataSetName="Ingredients">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ingredients" msprop:Generator_UserTableName="Ingredients" msprop:Generator_RowDeletedName="IngredientsRowDeleted" msprop:Generator_RowChangedName="IngredientsRowChanged" msprop:Generator_RowClassName="IngredientsRow" msprop:Generator_RowChangingName="IngredientsRowChanging" msprop:Generator_RowEvArgName="IngredientsRowChangeEvent" msprop:Generator_RowEvHandlerName="IngredientsRowChangeEventHandler" msprop:Generator_TableClassName="IngredientsDataTable" msprop:Generator_TableVarName="tableIngredients" msprop:Generator_RowDeletingName="IngredientsRowDeleting" msprop:Generator_TablePropName="_Ingredients">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sorter" msprop:Generator_UserColumnName="sorter" msprop:Generator_ColumnPropNameInRow="sorter" msprop:Generator_ColumnVarNameInTable="columnsorter" msprop:Generator_ColumnPropNameInTable="sorterColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="orderDetailNumber" msprop:Generator_UserColumnName="orderDetailNumber" msprop:Generator_ColumnPropNameInRow="orderDetailNumber" msprop:Generator_ColumnVarNameInTable="columnorderDetailNumber" msprop:Generator_ColumnPropNameInTable="orderDetailNumberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="component" msprop:Generator_UserColumnName="component" msprop:Generator_ColumnPropNameInRow="component" msprop:Generator_ColumnVarNameInTable="columncomponent" msprop:Generator_ColumnPropNameInTable="componentColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="percentage" msprop:Generator_UserColumnName="percentage" msprop:Generator_ColumnPropNameInRow="percentage" msprop:Generator_ColumnVarNameInTable="columnpercentage" msprop:Generator_ColumnPropNameInTable="percentageColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cost" msprop:Generator_UserColumnName="cost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInTable="costColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inventoryClass" msprop:Generator_UserColumnName="inventoryClass" msprop:Generator_ColumnPropNameInRow="inventoryClass" msprop:Generator_ColumnVarNameInTable="columninventoryClass" msprop:Generator_ColumnPropNameInTable="inventoryClassColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="componentClass" msprop:Generator_UserColumnName="componentClass" msprop:Generator_ColumnPropNameInRow="componentClass" msprop:Generator_ColumnVarNameInTable="columncomponentClass" msprop:Generator_ColumnPropNameInTable="componentClassColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

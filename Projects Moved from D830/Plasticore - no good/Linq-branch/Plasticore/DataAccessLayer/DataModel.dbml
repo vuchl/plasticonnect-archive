@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PlastiBase" Class="DataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HAMED-PC;Initial Catalog=PlastiBase;Persist Security Info=True;User ID=sa" SettingsObjectName="Plasticore.Properties.Settings" SettingsPropertyName="PlastiBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccountInformation" Member="AccountInformations">
+    <Type Name="AccountInformation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BillingAddressId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_DefaultCurrency]" Member="_DefaultCurrency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AccountInformation_Rfq" Member="Rfq" ThisKey="ID" OtherKey="BuyerAccountInformationId" Type="Rfq" Cardinality="One" />
+      <Association Name="AccountInformation_Quote" Member="Quotes" ThisKey="ID" OtherKey="SellerAccountInformationId" Type="Quote" />
+      <Association Name="Address_AccountInformation" Member="Address" ThisKey="BillingAddressId" OtherKey="Id" Type="Address" IsForeignKey="true" />
+      <Association Name="Contact_AccountInformation" Member="Contact" ThisKey="ContactId" OtherKey="Id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rfq" Member="Rfqs">
+    <Type Name="Rfq">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[_Type]" Member="_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BuyerAccountNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BuyerAccountInformationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deadline" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RfqNumber" Type="System.String" DbType="VARCHAR(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Rfq_Quote" Member="Quotes" ThisKey="Id" OtherKey="RfqId" Type="Quote" />
+      <Association Name="Rfq_RfqItem" Member="RfqItems" ThisKey="Id" OtherKey="RfqId" Type="RfqItem" />
+      <Association Name="AccountInformation_Rfq" Member="AccountInformation" ThisKey="BuyerAccountInformationId" OtherKey="ID" Type="AccountInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="[_Country]" Member="_Country" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Address_AccountInformation" Member="AccountInformation" ThisKey="Id" OtherKey="BillingAddressId" Type="AccountInformation" Cardinality="One" />
+      <Association Name="Address_DeliveryInformation" Member="DeliveryInformation" ThisKey="Id" OtherKey="DestinationAddressId" Type="DeliveryInformation" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Condition" Member="Conditions">
+    <Type Name="Condition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RequisitionItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_AuthorType]" Member="_AuthorType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Accepted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RequisitionItem_Condition" Member="RequisitionItem" ThisKey="RequisitionItemId" OtherKey="Id" Type="RequisitionItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FaxNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[_Ddt]" Member="_Ddt" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="AdditionalComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Contact_AccountInformation" Member="AccountInformation" ThisKey="Id" OtherKey="ContactId" Type="AccountInformation" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryInformation" Member="DeliveryInformations">
+    <Type Name="DeliveryInformation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestedDeliveryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[_FOB]" Member="_FOB" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="DestinationAddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DeliveryInformation_RfqItem" Member="RfqItems" ThisKey="Id" OtherKey="DeliveryInformationId" Type="RfqItem" />
+      <Association Name="Address_DeliveryInformation" Member="Address" ThisKey="DestinationAddressId" OtherKey="Id" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuantityMatrix" Member="QuantityMatrixes">
+    <Type Name="QuantityMatrix">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequisitionItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[_QauntityType]" Member="_QauntityType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Figure" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="RequisitionItem_QuantityMatrix" Member="RequisitionItem" ThisKey="RequisitionItemId" OtherKey="Id" Type="RequisitionItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Quote" Member="Quotes">
+    <Type Name="Quote">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequisitionId" Member="RfqId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SellerAccountNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SellerAccountInformationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuoteNumber" Type="System.String" DbType="VARCHAR(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Quote_QuoteItem" Member="QuoteItems" ThisKey="Id" OtherKey="QuoteId" Type="QuoteItem" />
+      <Association Name="AccountInformation_Quote" Member="AccountInformation" ThisKey="SellerAccountInformationId" OtherKey="ID" Type="AccountInformation" IsForeignKey="true" />
+      <Association Name="Rfq_Quote" Member="Rfq" ThisKey="RfqId" OtherKey="Id" Type="Rfq" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequisitionItem" Member="RequisitionItems">
+    <Type Name="RequisitionItem" Modifier="Abstract">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[_Type]" Member="_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" IsDiscriminator="true" />
+      <Column Name="ItemNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RequisitionItem_Condition" Member="Conditions" ThisKey="Id" OtherKey="RequisitionItemId" Type="Condition" />
+      <Association Name="RequisitionItem_QuantityMatrix" Member="QuantityMatrixes" ThisKey="Id" OtherKey="RequisitionItemId" Type="QuantityMatrix" />
+      <Type Name="RfqItem" InheritanceCode="0">
+        <Column Name="Id" AutoSync="OnInsert" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+        <Column Name="RfqId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+        <Column Name="NumberOfReleases" Type="System.Int32" DbType="Int" CanBeNull="true" />
+        <Column Name="ReleasePeriod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+        <Column Name="DeliveryInformationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+        <Column Name="ProductId" Type="System.Int32" DbType="INT" CanBeNull="false" />
+        <Association Name="RfqItem_QuoteItem" Member="QuoteItems" ThisKey="Id" OtherKey="RfqItemId" Type="QuoteItem" />
+        <Association Name="RfqItem_Product" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" Cardinality="One" />
+        <Association Name="DeliveryInformation_RfqItem" Member="DeliveryInformation" ThisKey="DeliveryInformationId" OtherKey="Id" Type="DeliveryInformation" IsForeignKey="true" />
+        <Association Name="Rfq_RfqItem" Member="Rfq" ThisKey="RfqId" OtherKey="Id" Type="Rfq" IsForeignKey="true" />
+      </Type>
+      <Type Name="QuoteItem" InheritanceCode="1">
+        <Column Name="Id" AutoSync="OnInsert" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+        <Column Name="QuoteId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+        <Column Name="RfqItemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+        <Association Name="Quote_QuoteItem" Member="Quote" ThisKey="QuoteId" OtherKey="Id" Type="Quote" IsForeignKey="true" />
+        <Association Name="RfqItem_QuoteItem" Member="RfqItem" ThisKey="RfqItemId" OtherKey="Id" Type="RfqItem" IsForeignKey="true" />
+      </Type>
+    </Type>
+  </Table>
+  <Table Name="dbo.ChemicalAdditive" Member="ChemicalAdditives">
+    <Type Name="ChemicalAdditive">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AntiBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AntiStatic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FoodFlex" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Shrink" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VirginMaterial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HighImpact" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Utility" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_ChemicalAdditive" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ColorInfo" Member="ColorInfos">
+    <Type Name="ColorInfo">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Color" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Trasparency" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="Product_ColorInfo" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoldingInfo" Member="FoldingInfos">
+    <Type Name="FoldingInfo">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FoldType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SlitPosition" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Trimmed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_FoldingInfo" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gauge" Member="Gauges">
+    <Type Name="Gauge">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Size" Type="System.Decimal" DbType="Decimal(10,8) NOT NULL" CanBeNull="false" />
+      <Column Name="FullGauge" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Gauge" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gusset" Member="Gussets">
+    <Type Name="Gusset">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Orientation" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Size" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Gusset" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hole" Member="Holes">
+    <Type Name="Hole">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoleSize" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="Product_Hole" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LipHood" Member="LipHoods">
+    <Type Name="LipHood">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LipSize" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Column Name="HoodSize" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Association Name="Product_LipHood" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Microvent" Member="Microvents">
+    <Type Name="Microvent">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="Product_Microvent" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Packaging" Member="Packagings">
+    <Type Name="Packaging">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Packaging" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrintingInfo" Member="PrintingInfos">
+    <Type Name="PrintingInfo">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Positioning" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="OuterSideColoring" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="InnerSideColoring" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Product_PrintingInfo" Member="Product" ThisKey="ProductId" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="HeaderSize" Type="System.Decimal" DbType="Decimal(7,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Length" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.Decimal" DbType="Decimal(10,4) NOT NULL" CanBeNull="false" />
+      <Column Name="LeakProof" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="RollsPerSkid" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SealedFirstType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SlipType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SlitPosition" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UviMonth" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="PartNumber" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Product_ChemicalAdditive" Member="ChemicalAdditive" ThisKey="ID" OtherKey="ProductId" Type="ChemicalAdditive" Cardinality="One" />
+      <Association Name="Product_ColorInfo" Member="ColorInfo" ThisKey="ID" OtherKey="ProductId" Type="ColorInfo" Cardinality="One" />
+      <Association Name="Product_FoldingInfo" Member="FoldingInfo" ThisKey="ID" OtherKey="ProductId" Type="FoldingInfo" Cardinality="One" />
+      <Association Name="Product_Gauge" Member="Gauge" ThisKey="ID" OtherKey="ProductId" Type="Gauge" Cardinality="One" />
+      <Association Name="Product_Gusset" Member="Gusset" ThisKey="ID" OtherKey="ProductId" Type="Gusset" Cardinality="One" />
+      <Association Name="Product_Hole" Member="Hole" ThisKey="ID" OtherKey="ProductId" Type="Hole" Cardinality="One" />
+      <Association Name="Product_LipHood" Member="LipHood" ThisKey="ID" OtherKey="ProductId" Type="LipHood" Cardinality="One" />
+      <Association Name="Product_Microvent" Member="Microvent" ThisKey="ID" OtherKey="ProductId" Type="Microvent" Cardinality="One" />
+      <Association Name="Product_Packaging" Member="Packaging" ThisKey="ID" OtherKey="ProductId" Type="Packaging" Cardinality="One" />
+      <Association Name="Product_PrintingInfo" Member="PrintingInfo" ThisKey="ID" OtherKey="ProductId" Type="PrintingInfo" Cardinality="One" />
+      <Association Name="RfqItem_Product" Member="RfqItem" ThisKey="ID" OtherKey="ProductId" Type="RfqItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

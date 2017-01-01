@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E9E6B86-6586-45BB-B271-54D66CA066AE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Site</RootNamespace>
+    <AssemblyName>Site</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RFQ-OPA\jquery.validate.min.js" />
+    <Content Include="RFQ-OPA\rfq.js" />
+    <Content Include="RFQ-OPA\images\addNewItem.png" />
+    <Content Include="RFQ-OPA\images\addQuantity.png" />
+    <Content Include="RFQ-OPA\images\addQuantity2.png" />
+    <Content Include="RFQ-OPA\images\delete.png" />
+    <Content Include="RFQ-OPA\images\deleteLast-2.png" />
+    <Content Include="RFQ-OPA\images\deleteLast-3.png" />
+    <Content Include="RFQ-OPA\images\deleteQuantity.png" />
+    <Content Include="RFQ-OPA\images\down.png" />
+    <Content Include="RFQ-OPA\images\duplicate.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2.html" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\check_map.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\child.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\child_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\down.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\editDocument.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\first.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\last.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\left.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\new_window.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\next.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\next_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\parent.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\parent_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\previous.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\previous_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\proedition.gif" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\right.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\set_filter.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\topicref.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\topicref_after.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\topicref_before.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\up.png" />
+    <Content Include="RFQ-OPA\images\icon source\help-2_files\xhtml.css" />
+    <Content Include="RFQ-OPA\images\icon source\help.html" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\addListItem.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\boldText.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\child.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\child_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\copy.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\cut.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\decrementColumnSpan.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\decrementRowSpan.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\definitionList.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\delete.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\down.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\figure_menu.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\first.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\hyperText.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\incrementColumnSpan.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\incrementRowSpan.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\insertColumnAfter.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\insertColumnBefore.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\insertRowAfter.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\insertRowBefore.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\italicText.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\itemizedList.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\last.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\new_window.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\next.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\normalText.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\onlineHelp.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\orderedList.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\paragraph.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\parent.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\parent_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\pasteAfter.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\pasteBefore.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\previous.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\previous_disabled.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\proedition.gif" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\section.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\table_menu.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\typewriterText.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\up.png" />
+    <Content Include="RFQ-OPA\images\icon source\help_files\xhtml.css" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List.html" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\accountadmin_available_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\accountadmin_available_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\accountadmin_notavailable_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\accountadmin_notavailable_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\accountadmin_offline.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\add2.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\android_icon.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\apple_icon.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\arrow_down_blue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\arrow_down_green.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\arrow_up_blue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\arrow_up_green.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\bing.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\book_green.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\book_open.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\browser_maxthon.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\cancel_login.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\chat-history-tab.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\chat-history-tab2.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\chatting.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\chatting2.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\chrome16.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\connection_btn.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\delete_survey.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\document_exchange.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\earth_find.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\edit_survey.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\end_chat.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\explorer_browser.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\firefox_browser.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\ghost.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\google.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\hand_offer.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\hand_paper.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\im-conversation-tab.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\index_add.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\index_delete.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\index_new.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\index_preferences.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\in_a_chat.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\link_add.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\login.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\logoSM.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\message_add.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\message_add2.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\mozilla_browser.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\netscape_browser.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\opera16.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\operator_available_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\operator_available_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\operator_notavailable_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\operator_notavailable_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\operator_offline.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\photo_scenery.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\queue.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\referrersymbol.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\reset_values.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\safari_browser.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_altavista.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_aol.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_askjeeves.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_espotting.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_excite.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_hotbot.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_looksmart.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_lycos.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_metacrawler.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_msn.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_netscape.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_overture.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_tiscali.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_webcrawler.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\search_engine_yahoo.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\secure2.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\send.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\shim.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\siteadmin_available_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\siteadmin_available_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\siteadmin_notavailable_inqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\siteadmin_notavailable_notinqueue.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\siteadmin_offline.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\sites_all_sites.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\sites_chat.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\spellcheck_1.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\survey.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\text_view.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\trafficlight_green.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\trafficlight_red.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\transferring_chat.gif" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\user1_refresh.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\users_into.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\user_headphones.png" />
+    <Content Include="RFQ-OPA\images\icon source\Icon_List_files\waiting_for_chat2.gif" />
+    <Content Include="RFQ-OPA\images\max.png" />
+    <Content Include="RFQ-OPA\images\min.png" />
+    <Content Include="RFQ-OPA\images\minimum.png" />
+    <Content Include="RFQ-OPA\images\modify.png" />
+    <Content Include="RFQ-OPA\images\up.png" />
+    <Content Include="RFQ-OPA\NewPtoBag.html" />
+    <Content Include="RFQ-OPA\NewSheeting.html" />
+    <Content Include="RFQ-OPA\ptoBagDialog.html" />
+    <Content Include="RFQ-OPA\ptoBagDialog.js" />
+    <Content Include="RFQ-OPA\requisition.css" />
+    <Content Include="RFQ-OPA\rfq.htm" />
+    <Content Include="RFQ-OPA\SheetingDialog.html" />
+    <Content Include="RFQ-OPA\sheetingDialog.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50334</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFW", "RFW\RFW.csproj", "{54B92352-2F6F-4FE9-920E-5896D7972BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RAM", "RAM\RAM.csproj", "{FB5D1535-2DAC-4A0B-B662-70C073A3D8F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{2723CF37-15B6-41BF-B7A3-83FB799A2D19}"
+	ProjectSection(SolutionItems) = preProject
+		itextsharp.dll = itextsharp.dll
+		ZMail.dll = ZMail.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPM", "RPM\RPM.csproj", "{E39FA779-482F-4BBA-8B3B-5344121CF7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTS", "RTS\RTS.csproj", "{45016942-66C0-4666-9705-568C4A97BA79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapping", "Mapping\Mapping.csproj", "{A36AF46D-A5BA-450E-810E-C16FEE816E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "DataProvider\DataProvider.csproj", "{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://neptun:8080/tfs/plasticonnect
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RFW\\RFW.csproj
+		SccProjectName1 = RFW
+		SccLocalPath1 = RFW
+		SccProjectUniqueName2 = RAM\\RAM.csproj
+		SccProjectName2 = RAM
+		SccLocalPath2 = RAM
+		SccProjectUniqueName3 = RPM\\RPM.csproj
+		SccProjectName3 = RPM
+		SccLocalPath3 = RPM
+		SccProjectUniqueName4 = RTS\\RTS.csproj
+		SccProjectName4 = RTS
+		SccLocalPath4 = RTS
+		SccProjectUniqueName5 = Mapping\\Mapping.csproj
+		SccProjectName5 = Mapping
+		SccLocalPath5 = Mapping
+		SccProjectUniqueName6 = DataAccess\\DataAccess.csproj
+		SccProjectName6 = DataAccess
+		SccLocalPath6 = DataAccess
+		SccProjectUniqueName7 = DataProvider\\DataProvider.csproj
+		SccProjectName7 = DataProvider
+		SccLocalPath7 = DataProvider
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B92352-2F6F-4FE9-920E-5896D7972BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B92352-2F6F-4FE9-920E-5896D7972BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B92352-2F6F-4FE9-920E-5896D7972BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B92352-2F6F-4FE9-920E-5896D7972BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5D1535-2DAC-4A0B-B662-70C073A3D8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5D1535-2DAC-4A0B-B662-70C073A3D8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5D1535-2DAC-4A0B-B662-70C073A3D8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5D1535-2DAC-4A0B-B662-70C073A3D8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39FA779-482F-4BBA-8B3B-5344121CF7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39FA779-482F-4BBA-8B3B-5344121CF7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39FA779-482F-4BBA-8B3B-5344121CF7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39FA779-482F-4BBA-8B3B-5344121CF7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45016942-66C0-4666-9705-568C4A97BA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45016942-66C0-4666-9705-568C4A97BA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45016942-66C0-4666-9705-568C4A97BA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45016942-66C0-4666-9705-568C4A97BA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36AF46D-A5BA-450E-810E-C16FEE816E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36AF46D-A5BA-450E-810E-C16FEE816E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36AF46D-A5BA-450E-810E-C16FEE816E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36AF46D-A5BA-450E-810E-C16FEE816E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

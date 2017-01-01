@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDDEACD0-77B5-4B8F-A40B-388591C6A3C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plasticonnect.DataAccess</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crm\SchemaAccounts.cs">
+      <DependentUpon>SchemaAccounts.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crm\SchemaAccounts.Designer.cs">
+      <DependentUpon>SchemaAccounts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaAccountStatistics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaAccountStatistics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaAddresses.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaAddresses.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaContact.cs">
+      <DependentUpon>SchemaContact.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crm\SchemaContact1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaContact.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaCreditors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaCreditors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaCreditRecords.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaCreditRecords.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crm\SchemaSalesActivities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaSalesActivities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaCost.cs">
+      <DependentUpon>SchemaCost.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaCost.Designer.cs">
+      <DependentUpon>SchemaCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaDraft.cs">
+      <DependentUpon>SchemaDraft.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaDraft.Designer.cs">
+      <DependentUpon>SchemaDraft.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaDraftItem.cs">
+      <DependentUpon>SchemaDraftItem.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaDraftItem.Designer.cs">
+      <DependentUpon>SchemaDraftItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaFormulaRule.cs">
+      <DependentUpon>SchemaFormulaRule.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaFormulaRule.Designer.cs">
+      <DependentUpon>SchemaFormulaRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaPredefinedProducts.cs">
+      <DependentUpon>SchemaPredefinedProducts.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaPredefinedProducts.Designer.cs">
+      <DependentUpon>SchemaPredefinedProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaPrinting.cs">
+      <DependentUpon>SchemaPrinting.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaPrinting.Designer.cs">
+      <DependentUpon>SchemaPrinting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaProduct.cs">
+      <DependentUpon>SchemaProduct.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaProduct.Designer.cs">
+      <DependentUpon>SchemaProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaRecipeItem.Designer.cs">
+      <DependentUpon>SchemaRecipeItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaRelease.cs">
+      <DependentUpon>SchemaRelease.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Products\SchemaRelease.Designer.cs">
+      <DependentUpon>SchemaRelease.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products\SchemaRequisition.Designer.cs" >
+      <DependentUpon>SchemaRequisition.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecordState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataProvider\DataProvider.csproj">
+      <Project>{FB460EF1-CCFB-4CDD-AB5A-43BC5C449E3F}</Project>
+      <Name>DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapping\Mapping.csproj">
+      <Project>{A36AF46D-A5BA-450E-810E-C16FEE816E66}</Project>
+      <Name>Mapping</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crm\SchemaAccounts.xsc">
+      <DependentUpon>SchemaAccounts.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaAccounts.xsd" />
+    <None Include="Crm\SchemaAccounts.xss">
+      <DependentUpon>SchemaAccounts.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaAccountStatistics.xsc">
+      <DependentUpon>SchemaAccountStatistics.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaAccountStatistics.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaAccountStatistics.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Crm\SchemaAccountStatistics.xss">
+      <DependentUpon>SchemaAccountStatistics.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaAddresses.xsc">
+      <DependentUpon>SchemaAddresses.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaAddresses.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaAddresses.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Crm\SchemaAddresses.xss">
+      <DependentUpon>SchemaAddresses.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaContact.xsc">
+      <DependentUpon>SchemaContact.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaContact.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaContact1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Crm\SchemaContact.xss">
+      <DependentUpon>SchemaContact.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaCreditors.xsc">
+      <DependentUpon>SchemaCreditors.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaCreditors.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaCreditors.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Crm\SchemaCreditors.xss">
+      <DependentUpon>SchemaCreditors.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaCreditRecords.xsc">
+      <DependentUpon>SchemaCreditRecords.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaCreditRecords.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaCreditRecords.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Crm\SchemaCreditRecords.xss">
+      <DependentUpon>SchemaCreditRecords.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaSalesActivities.xsc">
+      <DependentUpon>SchemaSalesActivities.xsd</DependentUpon>
+    </None>
+    <None Include="Crm\SchemaSalesActivities.xsd" />
+    <None Include="Crm\SchemaSalesActivities.xss">
+      <DependentUpon>SchemaSalesActivities.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaCost.xsc">
+      <DependentUpon>SchemaCost.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaCost.xsd" />
+    <None Include="Products\SchemaCost.xss">
+      <DependentUpon>SchemaCost.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaDraft.xsc">
+      <DependentUpon>SchemaDraft.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaDraft.xsd" />
+    <None Include="Products\SchemaDraft.xss">
+      <DependentUpon>SchemaDraft.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaDraftItem.xsc">
+      <DependentUpon>SchemaDraftItem.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaDraftItem.xsd" />
+    <None Include="Products\SchemaDraftItem.xss">
+      <DependentUpon>SchemaDraftItem.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaFormulaRule.xsc">
+      <DependentUpon>SchemaFormulaRule.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaFormulaRule.xsd" />
+    <None Include="Products\SchemaFormulaRule.xss">
+      <DependentUpon>SchemaFormulaRule.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaPredefinedProducts.xsc">
+      <DependentUpon>SchemaPredefinedProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaPredefinedProducts.xsd" />
+    <None Include="Products\SchemaPredefinedProducts.xss">
+      <DependentUpon>SchemaPredefinedProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaPrinting.xsc">
+      <DependentUpon>SchemaPrinting.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaPrinting.xsd" />
+    <None Include="Products\SchemaPrinting.xss">
+      <DependentUpon>SchemaPrinting.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaProduct.xsc">
+      <DependentUpon>SchemaProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaProduct.xsd" />
+    <None Include="Products\SchemaProduct.xss">
+      <DependentUpon>SchemaProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRecipeItem.xsc">
+      <DependentUpon>SchemaRecipeItem.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRecipeItem.xsd" />
+    <None Include="Products\SchemaRecipeItem.xss">
+      <DependentUpon>SchemaRecipeItem.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRelease.xsc">
+      <DependentUpon>SchemaRelease.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRelease.xsd" />
+    <None Include="Products\SchemaRelease.xss">
+      <DependentUpon>SchemaRelease.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRequisition.xsc">
+      <DependentUpon>SchemaRequisition.xsd</DependentUpon>
+    </None>
+    <None Include="Products\SchemaRequisition.xsd" />
+    <None Include="Products\SchemaRequisition.xss">
+      <DependentUpon>SchemaRequisition.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

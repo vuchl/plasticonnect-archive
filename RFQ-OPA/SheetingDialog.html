@@ -1,0 +1,36 @@
+	<div>Sizing:</div>
+	<div class='fieldset' data='sizing'>
+		<div class='content'>
+			<table>
+			<tr class='lables'>
+				<td><label for='txtBoxWidth'>width:</label></td>
+				<td><label for='txtBoxGauge'>gauge:</label></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" 
+						id="txtBoxWidth" class='simple number' style='width: 50px' 
+						maxlength="6" dataDescription='Top size of the bag when it is laid flat' 
+						data='width'
+					/> X </td>
+				<td>
+					<input type="text" id="txtBoxGauge" class='simple number' style='width: 70px' maxlength="6" 
+						data='gauge' dataDescription='Plastics Thickness (0.001 = 1mil)' />
+				</td>
+			</tr>
+			</table>
+		</div>
+		<div class='status'><span> </span></div>
+	</div>
+	<div>
+		<label>Folding</label>
+		<select data='folding' dataDescription='The way that sheeting gets fold on the roll'>
+			<option>Single-Ply (No Folding)</option>
+			<option>Double-Ply (No Folding)</option>
+			<option>U-Fold</option>
+			<option>J-Fold</option>
+			<option>C-Fold</option>
+			<option>M-Fold (Side Slit)</option>
+			<option>4-Fold (Middle Slit)</option>
+		</select>
+	</div>

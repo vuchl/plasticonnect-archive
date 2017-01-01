@@ -1,0 +1,136 @@
+﻿@{
+	ViewBag.Title = "RFQ Draft";
+}
+
+@model BusinessLogic.RfqDraft
+		   
+@section Header {
+	<link rel="StyleSheet" href='http://www.lastsignal.com/themes/simple/main.css' type="text/css" />
+	<link rel="StyleSheet" href='@Url.Content("~/Content/requisition.css")' />
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/rfq.js")" type="text/javascript"></script>
+
+	<style type='text/css'>
+
+	.paper {
+		width: 8.5in;
+		margin: auto;
+	}
+
+	.paper > table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	</style>
+}
+
+<div class="paper">
+<table>
+<tr>
+	<td rowspan='3'><h1>RFQ Draft</h1></td>
+	<td class='prompt' style='text-align: right; width: 120px;'>RFQ Number:</td>
+	<td style='text-align: right'>not submitted</td>
+</tr>
+<tr>
+	<td class='prompt' style='text-align: right; width: 120px;'>Issue Date:</td>
+	<td style='text-align: right; width: 200px;'>not submitted</td>
+</tr>
+<tr>
+	<td class='prompt' style='text-align: right; width: 120px;'>Deadline:</td>
+	<td style='text-align: right; width: 200px;'>
+		<input class="datepicker" value="Feb 13, 2011" />
+	</td>
+</tr>
+</table>
+<table>
+<tr class='titler'>
+	<td class='prompt'>Buyer:</td>
+	<td class='prompt'>Delivery:</td>
+</tr>
+<tr>
+	<td>
+		@Model.Customer.CustomerName<br />
+		@Html.Partial("_Address", @Model.Customer.BillingAddress)
+		<span class='prompt'>Contact:</span><input value="@Model.BuyerDefaultContact" />
+	</td>
+	<td>
+		<table>
+			<tr>
+				<td class='prompt' style='text-align: right'>Requested Date:</td>
+				<td>Varies by item</td>
+			</tr>
+			<tr>
+				<td class='prompt' style='text-align: right'>FOB:</td>
+				<td>Destination</td>
+			</tr>
+			<tr>
+				<td class='prompt' style='text-align: right'>Ship to:</td>
+				<td>M1M 1M1</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr class='titler'>
+	<td colspan='2'><span class='prompt'>Requested Term:</span> 
+@*	@Html.DropDownListFor(x=> x.RequestedTerms, Model.RequestedTerms)*@
+	</td>
+</tr>
+</table>
+<table id='mainRequisition' class='simple requisition'>
+</table>
+<div class='actions'>
+	<select id='productSelector'>
+		<option value='-1' selected='selected'>Select Product...</option>
+		<option value='PtoBag'>PTO Bag</option>
+		<option value='Sheeting'>Sheeting</option>
+	</select>
+	<img src='@Url.Content("~/Content/images/addNewItem.png")' alt="Add New Item"/>
+</div>
+<div id='productDialog' class='dialog'>
+</div>
+<a id='submit'>Submit</a><br/>
+<a id='testAddNew'>Test Add New PTO</a><br/>
+<a id='testPost'>Test Post</a><br/>
+<div id='dump' style='padding: 15px; border: 1px solid cyan; margin: 15px'>
+</div>
+</div>
+
+@Html.Partial("RfqRowTemplate")
+
+@section AfterEnd {
+	<script type='text/javascript'>
+		var dialogWidths = {
+			'PtoBag': '400px',
+			'Sheeting': '300px'
+		};
+
+		var dataSource = @ViewBag.DataSource;
+
+		$(function() {
+			$(".datepicker").datepicker();
+		});
+
+
+		$('#testPost').click(function () {
+			var url = '@Url.Action("PostSomething", new { i = 5 })';
+			$.ajax({
+				type: 'POST',
+				url: url,
+				cache: false,
+				success: function (html) {
+					$("#productDialog").empty().append(html).dialog(dialogProps);
+					$(".ui-dialog-titlebar").hide();
+
+					$.getScript(dialogScript, function (data, textStatus) {
+						initializeDialog();
+					});
+				}
+		});
+	});
+
+	</script>
+}

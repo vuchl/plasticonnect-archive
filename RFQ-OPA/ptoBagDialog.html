@@ -1,0 +1,54 @@
+<form id="porpertyForm">
+	<div>Sizing:</div>
+	<div class='fieldset' data='sizing'>
+		<div class='content'>
+			<table>
+			<tr class='lables'>
+				<td><label for='txtBoxWidth'>width:</label></td>
+				<td col='gusset'>
+					<span style='overflow: hidden; white-space: nowrap;'>
+						<label for='txtBoxGusset'>gusset:</label>
+					</span>
+				</td>
+				<td><label for='txtBoxLength'>length:</label></td>
+				<td><label for='txtBoxGauge'>gauge:</label></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" 
+						id="txtBoxWidth" name="txtBoxWidth" class='simple number' style='width: 50px' 
+						maxlength="6" dataDescription='Top size of the bag when it is laid flat' 
+						data='width'
+					/> X </td>
+				<td col='gusset'>
+					<span style='overflow: hidden; white-space: nowrap;'>
+					<input type="text" id="txtBoxGusset" class='simple number' style='width: 50px' 
+						maxlength="6" dataDescription='Gusset size' 
+						data='gussetSize'
+					/> 
+					<select class='simple' dataDescription='Gusset Orientation (Side/Bottom)' data='gussetOrientation'>
+						<option value='(S)'>(S)</option>
+						<option value='(B)'>(B)</option>
+					</select>
+					X
+					</span>
+				</td>
+				<td>
+					<input type="text" id="txtBoxLength" class='simple number' style='width: 50px' maxlength="6" 
+						data='length' dataDescription='Length (side) of the bage' /> X
+				</td>
+				<td>
+					<input type="text" id="txtBoxGauge" class='simple number' style='width: 70px' maxlength="6" 
+						data='gauge' dataDescription='Plastics Thickness (0.001 = 1mil)' />
+				</td>
+			</tr>
+			</table>
+		</div>
+		<div class='status'><span> </span></div>
+	</div>
+	<div>
+		<label><input type='radio' name='sealing'>Bottom-Sealed (Side-Gusset)</input></label><br/>
+		<label><input type='radio' name='sealing'>Side-Sealed (Bottom-Gusset)</input></label>
+	</div>
+	<p><a id='toggleGusset'>Remove Gusset</a></p>
+</form>

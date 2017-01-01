@@ -1,0 +1,74 @@
+﻿@using PlastifaceMvc.Models
+@{
+	ViewBag.Title = "Test";
+	Layout = null;
+}
+
+@section Header
+{
+}
+
+<html>
+	<head>
+		<title>Test Page</title>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+@*		<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>*@
+	</head>
+	<body>
+		
+		<h2>Test</h2>
+
+		<a id="button" href="javascript:void(0);">The link</a>
+		
+		<div id='productDialog' class='dialog'></div>
+		
+		@{
+			var model = new CreatePtoBag();
+			
+			Html.RenderPartial("_V1", model);
+		}
+	</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		var dialogProps = {
+			resizable: false,
+			modal: true,
+			width: '400px',
+			open: function () {
+				$(this).load('@Url.Action("CreateDialog")');
+			},
+			close: function () {
+			},
+			buttons: {
+				"Ok": function () {
+					var newRow = theRowTemplate.clone();
+					newRow.removeAttr("id");
+					newRow.data('item', item);
+					initializeRow(newRow);
+
+					newRow.find('td').wrapInner('<div style="display: block;" />');
+					newRow.find('td > div').hide();
+					$('#mainRequisition').append(newRow);
+					newRow.find('td > div').slideDown(400, function () {
+						var $set = $(this);
+						$set.replaceWith($set.contents());
+					});
+					$(this).dialog('close');
+				},
+				"Cancel": function () { $(this).dialog('close'); }
+			}
+		};
+
+		$('#button').click(function () {
+			$('#productDialog').dialog(dialogProps);
+		});
+
+	});
+
+</script>
+

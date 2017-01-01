@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{214B28D9-18BD-4F46-B33E-4C62D0CF5280}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plasticore</RootNamespace>
+    <AssemblyName>Plasticore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Core\EventArgs.cs" />
+    <Compile Include="DraftItem.cs" />
+    <Compile Include="Enums\BundleType.cs" />
+    <Compile Include="Enums\Country.Country.cs" />
+    <Compile Include="Enums\Currency.cs" />
+    <Compile Include="Enums\DocumentDeliveryType.cs" />
+    <Compile Include="Enums\Fob.cs" />
+    <Compile Include="Enums\FoldingType.cs" />
+    <Compile Include="Enums\GussetOrientation.cs" />
+    <Compile Include="Enums\HoleSize.cs" />
+    <Compile Include="Enums\HoodType.cs" />
+    <Compile Include="Enums\MicroventType.cs" />
+    <Compile Include="Enums\PackagingType.cs" />
+    <Compile Include="Enums\PaymentTerms.cs" />
+    <Compile Include="Enums\PrintingColoring.cs" />
+    <Compile Include="Enums\PrintingType.cs" />
+    <Compile Include="Enums\ResinColor.cs" />
+    <Compile Include="Enums\ReleasePeriod.cs" />
+    <Compile Include="Enums\SealedFirstType.cs" />
+    <Compile Include="Enums\SealingType.cs" />
+    <Compile Include="Enums\SlipType.cs" />
+    <Compile Include="Enums\SlitPosition.cs" />
+    <Compile Include="Enums\TextDirectionType.cs" />
+    <Compile Include="Enums\Thickness.cs" />
+    <Compile Include="Enums\TransparencyType.cs" />
+    <Compile Include="Enums\Uom.cs" />
+    <Compile Include="Enums\UserInterface.cs" />
+    <Compile Include="Enums\WicketSize.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="PlasticoreContext.cs" />
+    <Compile Include="ProductClasses\Interfaces\Bag.cs" />
+    <Compile Include="ProductClasses\Interfaces\Flat.cs" />
+    <Compile Include="ProductClasses\Interfaces\IDataString.cs" />
+    <Compile Include="ProductClasses\Interfaces\Loose.cs" />
+    <Compile Include="ProductClasses\Interfaces\Piece.cs" />
+    <Compile Include="ProductClasses\Interfaces\Pto.cs" />
+    <Compile Include="ProductClasses\Interfaces\Roll.cs" />
+    <Compile Include="ProductClasses\Cgp.cs" />
+    <Compile Include="ProductClasses\Supplimentals\Bundle.cs" />
+    <Compile Include="ProductClasses\Supplimentals\ChemicalAdditives.cs" />
+    <Compile Include="ProductClasses\Supplimentals\ProductColor.cs" />
+    <Compile Include="Core\Core.cs" />
+    <Compile Include="DeliveryInformation.cs" />
+    <Compile Include="ProductClasses\Supplimentals\FoldingInfo.cs" />
+    <Compile Include="ProductClasses\Supplimentals\Gauge.cs" />
+    <Compile Include="ProductClasses\Supplimentals\Gusset.cs" />
+    <Compile Include="ProductClasses\Interfaces\IGussetable.cs" />
+    <Compile Include="ProductClasses\Supplimentals\LipHood.cs" />
+    <Compile Include="ProductClasses\LooseBag.cs" />
+    <Compile Include="ProductClasses\LooseSheet.cs" />
+    <Compile Include="Testing\TestCollection.cs" />
+    <Compile Include="Testing\TestProduct.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ItemQuantity.cs" />
+    <Compile Include="RichEnum.cs" />
+    <Compile Include="ProductClasses\Supplimentals\Packaging.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="ProductClasses\Supplimentals\Printing.cs" />
+    <Compile Include="ProductClasses\Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProductClasses\PtoBag.cs" />
+    <Compile Include="ProductClasses\PtoSheet.cs" />
+    <Compile Include="ProductClasses\PtoSleeve.cs" />
+    <Compile Include="Quote.cs" />
+    <Compile Include="QuoteItem.cs" />
+    <Compile Include="Requisition.cs" />
+    <Compile Include="RequisitionItem.cs" />
+    <Compile Include="Rfq.cs" />
+    <Compile Include="RfqItem.cs" />
+    <Compile Include="Seller.cs" />
+    <Compile Include="ProductClasses\Sheeting.cs" />
+    <Compile Include="ProductClasses\Tubing.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValidationManager\ValidationManager.csproj">
+      <Project>{C2CCD301-EED4-428C-910C-15CB6E1A4D27}</Project>
+      <Name>ValidationManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

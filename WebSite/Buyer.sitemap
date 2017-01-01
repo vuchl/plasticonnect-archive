@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+<siteMapNode url="~/BuyersPages/Home.aspx" title="Home" description="Starting Page">
+    <siteMapNode title="New RFQ" description="Request for a new Quote" url="~/CommonPages/NewRfq.aspx" />
+    <siteMapNode title="My Products" description="Manage Predefined Product List" url="~/BuyersPages/PredefinedProducts.aspx" />
+	<siteMapNode title="History" description="Chech the History" url="~/BuyersPages/History.aspx" />    
+</siteMapNode>
+
+</siteMap>

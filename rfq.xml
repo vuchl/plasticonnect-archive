@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rfq>
+	<BillTo Name="ABC Company">
+		<Line1>1 Main St.</Line1>
+		<City>AnyTown</City>
+		<State>WA</State>
+		<Zip>00000</Zip>
+		<Country>USA</Country>
+	</BillTo>
+	<Payment>
+		<Currency>USD</Currency>
+		<Term>N30</Term>
+	</Payment>
+	<Delivery>
+		<DeliveryType>Carrier</DeliveryType>
+		<Destination>
+			<Zip>X1X 1X1</Zip>
+		</Destination>
+		<Date>Jun 4, 2011</Date>
+	</Delivery>
+	<Items>
+		<OrderedItem>
+			<Quantity type="Exact">120000</Quantity>
+			<Uom>M</Uom>
+			<Product type="PtoBag" itemName="Part# 12345">
+				<Width></Width>
+				<Length></Length>
+				<Gauge></Gauge>
+				<Description>some description about the product</Description>
+			</Product>
+			<Comments/>
+		</OrderedItem>
+	</Items>
+	<Comments/>
+</Rfq>
